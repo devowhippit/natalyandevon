@@ -9,6 +9,11 @@
  * Variables
  */
 
+font-base: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+
 weight-black = 800;
 weight-extrabold = 700;
 weight-bold = 600;
@@ -25,17 +30,17 @@ color-base = neutrals.black
  */
 
 font-thin = @block {
-    font-family: 'Font Name Extra Light'
+    font-family: font-base
     font-weight: weight-thin
 }
 
 font-light = @block {
-    font-family: 'Font Name Light'
+    font-family: font-base
     font-weight: weight-light
 }
 
 font-semibold = @block {
-    font-family: 'Font Name Semi Bold'
+    font-family: font-base
     font-weight: weight-bold
 }
 
