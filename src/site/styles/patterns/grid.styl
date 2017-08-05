@@ -7,7 +7,7 @@
 
 
 /**
- * Styles
+ * Declarations
  */
 
 .wrap, [class*='wrap-']
@@ -71,36 +71,36 @@ for s in (1..shims)
 
 
 for _n, g in gutters
-    .add{_n}
+    .m{_n}
         margin{_n} g
 
-    .add{_n + '\-2x'}
+    .m{_n + '\-2x'}
         margin{_n} g * 2
 
-    .add{_n + '\-3x'}
+    .m{_n + '\-3x'}
         margin{_n} g * 3
 
 for m in (1..multiplier)
-    horizontalsverticals(margins, 'add', 'margin', m)
+    horizontalsverticals(margins, 'm', 'margin', m)
 
-.add-none
+.m-none
     margin 0
 
 
 for _n, g in gutters
-    .pad{_n}
+    .p-{_n}
         padding{_n} g
 
-    .pad{_n + '\-2x'}
+    .p-{_n + '\-2x'}
         padding{_n} g * 2
 
-    .pad{_n + '\-3x'}
+    .p-{_n + '\-3x'}
         padding{_n} g * 3
 
 for m in (1..multiplier)
-    horizontalsverticals(margins, 'pad', 'padding', m)
+    horizontalsverticals(margins, 'p-', 'padding', m)
 
-.pad-none
+.p-none
     padding 0
 
 
@@ -122,33 +122,33 @@ for _b, b in breaks
                 width _w * 1%
 
         for _n, g in gutters
-            .add{_n}{'\@'}{_b}
+            .m{_n}{'\@'}{_b}
                 margin{_n} g
 
-            .add{_n + '\-2x'}{'\@'}{_b}
+            .m{_n + '\-2x'}{'\@'}{_b}
                 margin{_n} g * 2
 
-            .add{_n + '\-3x'}{'\@'}{_b}
+            .m{_n + '\-3x'}{'\@'}{_b}
                 margin{_n} g * 3
 
-            .add-none{'\@'}{_b}
+            .m-none{'\@'}{_b}
                 margin 0
 
-            .pad{_n}{'\@'}{_b}
+            .p{_n}{'\@'}{_b}
                 padding{_n} g
 
-            .pad{_n + '\-2x'}{'\@'}{_b}
+            .p{_n + '\-2x'}{'\@'}{_b}
                 padding{_n} g * 2
 
-            .pad{_n + '\-3x'}{'\@'}{_b}
+            .p{_n + '\-3x'}{'\@'}{_b}
                 padding{_n} g * 3
 
-            .pad-none{'\@'}{_b}
+            .p-none{'\@'}{_b}
                 padding 0
 
         for m in (1..multiplier)
-            horizontalsverticals(margins, 'add', 'margin', m, '\@' + _b)
-            horizontalsverticals(margins, 'pad', 'padding', m, '\@' + _b)
+            horizontalsverticals(margins, 'm', 'margin', m, '\@' + _b)
+            horizontalsverticals(margins, 'p', 'padding', m, '\@' + _b)
 
 
 
