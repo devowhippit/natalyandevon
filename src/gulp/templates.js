@@ -46,6 +46,7 @@ function templates() {
     service.matter = matterservice;
     service.site = site;
     service.route = route;
+    service.content = content;
 
     var src = [
         'site/*.twig',
@@ -75,6 +76,19 @@ function templates() {
         return data;
     }
 
+    function content(data, file) {
+        try {
+            var r = file.path.split('site/')[1];
+            r = r.split('.')[0];
+            var d = fs.readFileSync(r + '.md', 'utf8');
+            // fs.readFile(`content/${files[i]}`, 'utf8', function(err, d){
+            //     let content = d.split('\n');
+            //     content = content.join('\n');
+            var content = d;
+        } catch(e) {}
+        return data;
+    }
+
     function matterservice(file) {
         var f = file;
         var m = matter(String(f.contents));
@@ -82,8 +96,10 @@ function templates() {
 
         // get site data
         data = service.site(data, f);
-        // get page data if it exits
+        // get page data if it exists
         data = service.route(data, f);
+        // get content if it exists
+        // data = service.content(data, f);
 
         return data;
     }
@@ -93,7 +109,9 @@ function templates() {
         // read front matter data in template
         .pipe(data(service.matter))
         // render templates in twig
-        .pipe(twig())
+        .pipe(twig({
+            base: 'site'
+        }))
         // replace html build blocks
         .pipe(htmlreplace(CONFIG))
         // pipe file to the build destination

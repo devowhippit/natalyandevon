@@ -4,7 +4,7 @@
 
     <title>{% if title %}{{title}} // {% endif %}{{site.title}}</title>
 
-    <meta name="description" content="{{site.mission}}"/>
+    {# <meta name="description" content="{{site.mission}}"/>
     <meta name="keywords" content="{{site.keywords}}"/>
     <meta name="author" content="{{site.author}}">
 
@@ -23,11 +23,11 @@
     <meta name="twitter:creator" content="{{site.twitter.creator}}">
     <meta name="twitter:title" content="{% if title %}{{title | lower}} // {% endif %}{{site.twitter.title}}">
     <meta name="twitter:description" content="{{site.twitter.description}}">
-    <meta name="twitter:image" content="{{site.twitter.image}}">
+    <meta name="twitter:image" content="{{site.twitter.image}}"> #}
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="{{site.favicons}}apple-touch-icon-57x57.png">
+    {# <link rel="apple-touch-icon" sizes="57x57" href="{{site.favicons}}apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="{{site.favicons}}apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{{site.favicons}}apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="{{site.favicons}}apple-touch-icon-76x76.png">
@@ -48,9 +48,9 @@
     <meta name="msapplication-TileColor" content="{{site.color}}">
     <meta name="msapplication-TileImage" content="{{site.favicons}}mstile-144x144.png">
     <meta name="msapplication-config" content="{{site.favicons}}browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> #}
 
-    <script>
+    {# <script>
         var hosts = '{{site.hosts}}';
         hosts = hosts.split(',');
         if (hosts.indexOf(document.domain) > -1) {
@@ -61,11 +61,10 @@
             ga('create','{{site.google.tracking_id}}','auto');
             ga('send','pageview');
         }
-    </script>
+    </script> #}
 
-    <meta name="google-site-verification" content="{{site.google.site_verification}}" />
+    {# <meta name="google-site-verification" content="{{site.google.site_verification}}" />  #}
 
-    <!-- build:styles -->
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/site.min.css">
 
 </head>

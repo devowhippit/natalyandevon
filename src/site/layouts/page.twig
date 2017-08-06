@@ -1,0 +1,16 @@
+
+
+{% include "partials/html.twig" %}
+
+<body>
+
+    {% include 'partials/header.twig' %}
+
+    <h1>{{title}}</h1>
+
+    {% block content %}{% endblock %}
+
+    {% include 'partials/footer.twig' %}
+
+</body>
+</html>

@@ -20,7 +20,8 @@ function watch() {
 
     gulp.watch([
         'site/*.twig',
-        'site/templates/**/*.twig'
+        'site/**/*.twig',
+        'data/*.json'
     ], ['templates']);
 
     gulp.watch([
