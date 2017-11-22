@@ -1,5 +1,8 @@
 = mixin('nav')
   div class='m-vertical-3 p-vertical-3'
     nav class='c-nav-inline-block'
-      a class='c-primary-blue' href='index' Home
-      a class='c-primary-blue' href='about' About
+      a class='' href='index' Home
+      a class='' href='travel' How to get there
+      a class='' href='accommodations' Accommodations
+      a class='' href='activities' Activities
+      a class='' href='contact' Early RSVP

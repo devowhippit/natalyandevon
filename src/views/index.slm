@@ -12,6 +12,18 @@
 
 = content('title')
   = mixin('header', 'Natalya & Devon are getting married. Come celebrate.')
+  button EARLY RSVP (call to action)
+  p June 16th 2018 • West Kill, New York
+  p West Kill, New York, lies in the heart the Catskill Mountains, nestled in Spruceton Valley. The area boasts gorgeous hiking trails, plentiful rivers and streams for fishing (and tubing), and delicious farm-to-table restaurants – all surrounded by some of the most breathtaking scenery on the east coast.
+
+  p We have a lot of special memories in these mountains and we want to share their beauty – and our union – with you.
+  h2 Newton Farm
+  p Newton Farm is an historic 1860 farm which used to belong to (forget the details). Lynn Loflin has owned the farm since (?) when she came to live there with her husband Stu and son Ian.
+
+  p Lynn is an acclaimed New York City chef and restaurateur (more deets here). She now works at (more details here).
+
+  p She graciously agreed to host and cater our wedding and she has become our de facto wedding planner. It has been a pleasure to collaborate with her and we’re grateful for all of her good ideas and good sense.
+
 
 = content('body')
   = mixin('nav')
