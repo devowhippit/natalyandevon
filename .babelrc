@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "external-helpers",
+    "lodash"
+  ],
+  "presets": [
+    [
+      "es2015", {
+        modules: false
+      }
+    ]
+  ]
+}

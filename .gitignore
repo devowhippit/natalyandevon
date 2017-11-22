@@ -28,4 +28,4 @@ deploy/*
 temp/*
 
 # npm
-src/node_modules/*
+node_modules/*

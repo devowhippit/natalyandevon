@@ -1,0 +1,5 @@
+= mixin('nav')
+  div class='m-vertical-3 p-vertical-3'
+    nav class='c-nav-inline-block'
+      a class='c-primary-blue' href='index' Home
+      a class='c-primary-blue' href='about' About
