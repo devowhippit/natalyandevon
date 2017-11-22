@@ -11,7 +11,7 @@
   = mixin('head', 'Natalya and Devon')
 
 = content('title')
-  = mixin('header', 'Natalya and Devon')
+  = mixin('header', 'Natalya & Devon are getting married. Come celebrate.')
 
 = content('body')
   = mixin('nav')

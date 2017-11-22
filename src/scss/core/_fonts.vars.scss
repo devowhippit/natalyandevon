@@ -7,7 +7,10 @@
 
 $vars: map-get($vars, 'fonts');
 
-$font-base: map-get($vars, font-size);
-$line-height-base: map-get($vars, line-height);
+$font-family: map-get($vars, 'font-family');
+$font-base: map-get($vars, 'font-size');
+$line-height-base: map-get($vars, 'line-height');
 
-$font-system: map-get($vars, font-system);
+$font-italic: 'Domain Text Light Italic';
+$font-bold: 'Domain Text Bold';
+$font-system: map-get($vars, 'font-system');
