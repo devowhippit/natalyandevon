@@ -1,9 +1,12 @@
 $vars:(
   fonts: (
-    font-family: ('Domain Text Light', Times New Roman, serif),
+    font-family: ('Cormorant Regular', Times New Roman, serif),
+    font-bold: 'Cormorant Bold',
     font-system: (-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif),
-    font-size: 16px,
-    line-height: 20px
+    font-size-base: 16px,
+    font-size-medium: 18px,
+    font-size-large: 24px,
+    line-height-base: 20px
   ),
   colors: ((
     name: base-black,
@@ -11,6 +14,15 @@ $vars:(
   ), (
     name: base-white,
     hex: #FFFFFF
+  ), (
+    name: blue-light,
+    hex: #D2FFFF
+  ), (
+    name: blue-mid,
+    hex: #ACD6DD
+  ), (
+    name: blue-dark,
+    hex: #001D43
   )),
   media: (
     screen-desktop: 960,

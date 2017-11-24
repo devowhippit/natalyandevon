@@ -18,6 +18,27 @@
   @include font-system
 }
 
+// font feature settings; https://blog.webtype.com/?p=4085
+.ffs-liga {
+  font-feature-settings: 'liga'
+}
+
+.ffs-dlig {
+  font-feature-settings: 'dlig'
+}
+
+.ffs-sups {
+  font-feature-settings: 'sups'
+}
+
+.ffs-subs {
+  font-feature-settings: 'subs'
+}
+
+.ffs-salt {
+  font-feature-settings: 'salt'
+}
+
 .fw-normal {
   font-weight: normal
 }

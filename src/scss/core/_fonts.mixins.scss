@@ -6,14 +6,17 @@
 @import 'fonts.vars';
 
 // Mixins
-@mixin font-face($name, $file, $style, $weight) {
-    font-family: $name;
-    src: url($file + '.eot');
-    src: url($file + '.eot?#iefix') format('embedded-opentype'),
-         url($file + '.woff')       format('woff'),
-         url($file + '.ttf')        format('truetype');
-    font-style: $style;
-    font-weight: $weight;
+@mixin font-face($name, $file, $style, $weight, $range : false) {
+  font-family: $name;
+  src: url($file + '.eot');
+  src: url($file + '.eot?#iefix') format('embedded-opentype'),
+       url($file + '.woff') format('woff'),
+       url($file + '.ttf') format('truetype');
+  font-style: $style;
+  font-weight: $weight;
+  @if $range {
+    unicode-range: $range;
+  }
 }
 
 @mixin font-smooth() {
@@ -28,17 +31,11 @@
 }
 
 @mixin font-system() {
-  font-family: $font-system;
+  font-family: $font-system
 }
 
-@function em($pixels, $context: $font-base) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
-
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return $pixels / $context * 1em;
+@mixin all-caps() {
+  font-family: $font-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em
 }

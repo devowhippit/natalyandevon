@@ -6,62 +6,75 @@
 @import 'fonts.vars';
 @import 'fonts.mixins';
 @import 'colors.vars';
+@import '../functions/em';
 
 // Import
-@font-face { @include font-face('Domain Text Light', '../fonts/DomaineText-Light', normal, normal); }
-@font-face { @include font-face('Domain Text Light Italic', '../fonts/DomaineText-LightItalic', normal, normal); }
-@font-face { @include font-face('Domain Text Bold', '../fonts/DomaineText-Bold', normal, normal); }
+@font-face { @include font-face('Cormorant Regular', '../fonts/Cormorant-Regular', normal, normal); }
+@font-face { @include font-face('Cormorant Bold', '../fonts/Cormorant-Bold', normal, bold); }
 
 // Declarations
 body {
   color: map-get($colors, 'base-black');
   font-family: $font-family;
-  font-size: $font-base;
+  font-size: $font-size-base;
   line-height: $line-height-base
 }
 
 p {
-  margin-top: 0;
+  margin-top: 0
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   margin: 10px 0;
   font-family: $font-bold;
-  font-weight: 700;
   line-height: 20px;
   color: inherit;
-  text-rendering: optimizelegibility;
+  text-rendering: optimizelegibility
 }
 
-h1, h2 {
-  line-height: 40px;
+h1, .h1 {
+  font-size: em(38px, $font-size-base)
 }
 
-h1 {
-  font-size: 38.5px;
+h2, .h2 {
+  font-size: em($font-size-base, $font-size-base);
+  line-height: $line-height-base;
+  @include all-caps
 }
 
-h2 {
-  font-size: 31.5px;
+h3, .h3 {
+  font-family: $font-family;
+  font-weight: normal;
+  font-size: em(24px, $font-size-base);
 }
 
-h3 {
-  font-size: 24.5px;
-  line-height: normal;
+h4, .h4 {
+  font-size: em(18px, $font-size-base)
 }
 
-h4 {
-  font-size: 17.5px;
+h5, .h5 {
+  font-size: em(14px, $font-size-base)
 }
 
-h5 {
-  font-size: 14px;
+h6, .h6 {
+  font-size: em(11.9px, $font-size-base)
 }
 
-h6 {
-  font-size: 11.9px;
+.all-caps {
+  @include all-caps
+}
+
+a {
+  @include all-caps
+}
+
+p a {
+  font-family: $font-family;
+  text-transform: none;
+  letter-spacing: 0
 }
 
 pre, code {
-  @include font-smooth;
+  @include font-smooth
 }

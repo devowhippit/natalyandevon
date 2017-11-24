@@ -1,0 +1,53 @@
+/**
+ * Backgrounds
+ */
+
+// Dependencies
+// @import '...';
+
+// Declarations
+.br-no-repeat {
+  background-repeat: no-repeat
+}
+
+.br-repeat-y {
+  background-repeat: repeat-y
+}
+
+.br-repeat-x {
+  background-repeat: repeat-x
+}
+
+.bs-cover {
+  background-size: cover
+}
+
+.bp-center {
+  background-position: center center
+}
+
+.bp-right-center {
+  background-position: right center
+}
+
+.bp-left-center {
+  background-position: left center
+}
+
+.bp-center-bottom {
+  background-position: center bottom
+}
+
+.bs-h-100 {
+  background-size: auto 100%
+}
+
+.bs-w-100 {
+  background-size: 100% auto
+}
+
+.img-full {
+  height: 100%;
+  width: auto;
+  max-width: inherit;
+}

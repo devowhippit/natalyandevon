@@ -1,0 +1,20 @@
+/**
+ * Cells
+ */
+
+// Dependencies
+@import 'core/grid.vars';
+
+// Declarations
+.c-cell--stacked {
+  width: calc(100% - 32px);
+  height: calc(100% - 40px);
+  margin-top: $grid-base * 2;
+  margin-bottom: $grid-base;
+  margin-left: $grid-base * 2;
+}
+
+.c-cell--stacked + .c-cell--stacked {
+  margin-top: $grid-base;
+  margin-bottom: $grid-base * 2;
+}

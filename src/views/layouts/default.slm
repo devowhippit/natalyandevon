@@ -5,17 +5,18 @@ html lang='en'
 
   = content('head')
 
-body style='visibility: hidden;' onload='load()' class='bg-secondary-white'
+body style='visibility: hidden;' onload='load()'
 
-  = content('title')
+  / header class='ta-center'
+  /   = mixin('nav')
 
   main class='d-flex jc-end ai-stretch bg-base-white'
 
-    div class='f-12 p-relative'
-      div class='wrap wrap--full p-relative'
-        = content('body')
+    div class='f-6 mh-100vh d-flex ai-center'
+      div class='w-100p ta-center'
+        = content('title')
 
-    div class='f-1 o--1'
-    div class='f-1'
+    div class='f-6 mh-100vh d-flex fd-column'
+      = content('body')
 
   = mixin('footer')

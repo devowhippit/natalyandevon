@@ -14,6 +14,12 @@
 // Base Colors
 @include color($colors, $base);
 
+// Primary Background Colors
+@include background-color($colors, $primary);
+
+// Primary Colors
+@include color($colors, $primary);
+
 .b-transparent {
   border-color: transparent
 }

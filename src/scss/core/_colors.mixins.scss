@@ -28,11 +28,17 @@
       color: $hyperlink
     }
 
-    .btn.bg-#{$namespace}:focus,
-    .btn.bg-#{$namespace}:active,
-    html:not(.touchevents) .btn.bg-#{$namespace}:hover {
+    // .btn.bg-#{$namespace}:focus,
+    // .btn.bg-#{$namespace}:active,
+    // html:not(.touchevents) .btn.bg-#{$namespace}:hover {
+    //   color: $text;
+    //   background-color: darken($color, $delta-psuedo);
+    // }
+
+    html:not(.touchevents) .btn.bg-#{$namespace}\@hover:hover {
       color: $text;
-      background-color: darken($color, $delta-psuedo);
+      border-color: $color;
+      background-color: $color
     }
 
   }

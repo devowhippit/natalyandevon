@@ -3,11 +3,20 @@
  */
 
 // Dependencies
-// @import ...;
+@import '../core/grid.vars';
 
 // Declarations
 .w-100p {
   width: 100%;
+}
+
+.h-100p {
+  height: 100%
+}
+
+.wh-100p {
+  width: 100%;
+  height: 100%
 }
 
 .mh-25vh {

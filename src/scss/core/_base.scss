@@ -14,14 +14,31 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
+  position: relative;
+  &:after {
+    content: '';
+    border-bottom: 2px solid;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+  &:visited {
+    color: map-get($colors, 'blue-mid');
+  }
 }
 
 path {
   fill: none
 }
 
-header, main, footer, fieldset, section {
+header, main, footer, fieldset, section, div, h1, h2, h3, h4, h5, h6 {
   display: block;
   @include clearfix;
 }

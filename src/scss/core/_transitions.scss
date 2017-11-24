@@ -6,8 +6,8 @@
 // @import ...;
 
 // Declarations
-a, input, .btn, textarea, select {
+a, a:after, input, .btn, textarea, select {
   transition-property: opacity, background, color, border, box-shadow, outline, transform;
-  transition-duration: 0.25s;
+  transition-duration: 0.15s;
   backface-visibility: hidden;
 }

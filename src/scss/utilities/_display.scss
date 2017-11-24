@@ -18,6 +18,13 @@
   display: inline-block
 }
 
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
 // Create flexbox grow for the grid system
 @for $flex-column-index from 1 through $grid-columns {
 
@@ -61,4 +68,20 @@
 
 .ai-baseline {
   align-items: baseline
+}
+
+.fd-column {
+  flex-direction: column
+}
+
+.fd-column-reverse {
+  flex-direction: column-reverse
+}
+
+.fd-row {
+  flex-direction: row
+}
+
+.fd-row-reverse {
+  flex-direction: row-reverse
 }

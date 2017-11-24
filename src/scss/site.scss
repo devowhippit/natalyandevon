@@ -3,6 +3,7 @@
 // if @font-face is used it needs to be first imported first.
 @import 'core/fonts';
 @import 'core/base';
+@import 'core/hyperlinks';
 @import 'core/code';
 @import 'core/transitions';
 
@@ -24,6 +25,7 @@
 // utilities within them. Not all components are required for each application.
 // Component namespaces are prefixed with 'c-'.
 @import 'c-navs';
+@import 'c-cells';
 
 /*************************
  * Objects
@@ -50,4 +52,6 @@
 @import 'utilities/dimensions';
 @import 'utilities/svg';
 @import 'utilities/images';
+@import 'utilities/buttons';
+@import 'utilities/backgrounds';
 

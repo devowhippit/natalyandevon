@@ -4,13 +4,18 @@
 
 // Dependencies
 @import 'vars';
+@import '../functions/em';
 
+// Variables
 $vars: map-get($vars, 'fonts');
 
 $font-family: map-get($vars, 'font-family');
-$font-base: map-get($vars, 'font-size');
-$line-height-base: map-get($vars, 'line-height');
+$font-base: map-get($vars, 'font-size-base');
+$line-height-base: map-get($vars, 'line-height-base');
 
-$font-italic: 'Domain Text Light Italic';
-$font-bold: 'Domain Text Bold';
+$font-bold: map-get($vars, 'font-bold');
 $font-system: map-get($vars, 'font-system');
+
+$font-size-base: map-get($vars, 'font-size-base');
+$font-size-medium: em(map-get($vars, 'font-size-medium'), $font-size-base);
+$font-size-large: em(map-get($vars, 'font-size-large'), $font-size-base);

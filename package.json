@@ -14,7 +14,7 @@
     "test": "",
     "start": "PORT=$npm_package_config_port VARS=$npm_package_config_vars concurrently 'npm run styles-watch' 'npm run scripts-watch' 'npm run build-watch' 'npm run serve' 'npm run sync'",
     "serve": "node serve.js --ext slm --watch src",
-    "sync": "browser-sync start --files 'src' --no-open --no-ui --reload-delay 1000 --proxy \"http://localhost:$npm_package_config_port\"",
+    "sync": "browser-sync start --files 'src' --no-open --no-ui --reload-delay 2000 --proxy \"http://localhost:$npm_package_config_port\"",
     "build": "node build.js",
     "publish": "node publish.js",
     "build-watch": "nodemon --ext slm --watch src/views -x 'npm run build'",

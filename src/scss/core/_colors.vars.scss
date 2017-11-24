@@ -47,3 +47,23 @@ $base:
     hyperlinks: 'secondary-orange'
   );
 
+$primary:
+  (
+    namespace: 'blue-light',
+    color: 'blue-light',
+    text: 'blue-dark',
+    hyperlinks: 'blue-dark'
+  ),
+  (
+    namespace: 'blue-mid',
+    color: 'blue-mid',
+    text: 'blue-light',
+    hyperlinks: 'blue-light'
+  ),
+  (
+    namespace: 'blue-dark',
+    color: 'blue-dark',
+    text: 'blue-light',
+    hyperlinks: 'blue-light'
+  );
+
