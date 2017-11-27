@@ -1,0 +1,15 @@
+/**
+ * Index
+ */
+
+// Dependencies
+@import '../core/vars';
+
+// Declarations
+@each $index, $i in map-get($vars, 'indexes') {
+
+  .zi-#{$index} {
+    z-index: $i
+  }
+
+}

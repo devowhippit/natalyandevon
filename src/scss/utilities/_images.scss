@@ -10,3 +10,9 @@
   image-rendering: -webkit-optimize-contrast; // Chrome
   image-rendering: optimizequality; // FF
 }
+
+.image-full {
+  height: 100%;
+  width: auto;
+  max-width: inherit
+}

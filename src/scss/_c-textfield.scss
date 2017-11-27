@@ -1,0 +1,15 @@
+/**
+ * Textfield
+ */
+
+// Dependencies
+@import 'core/grid.vars';
+@import 'core/fonts.vars';
+
+// Declarations
+.c-textfield input {
+  font-size: $font-size-medium;
+  line-height: $line-height-base * 1.5;
+  text-indent: ($grid-base * 2);
+  padding: ($grid-base * 2) 0 ($grid-base * 2)
+}

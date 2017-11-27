@@ -1,0 +1,30 @@
+/**
+ * Filters
+ */
+
+// Dependencies
+@import '../core/vars';
+@import '../core/filters.mixins';
+
+// Declarations
+.filter {
+  position: relative
+}
+
+.filter::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1
+}
+
+.filter-0_5::before {
+  opacity: 0.5
+}
+
+@include mbm-filters(map-get($vars, 'mix-blend-modes'));

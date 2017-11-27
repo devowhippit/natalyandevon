@@ -3,11 +3,11 @@
  */
 
 // Dependencies
-// @import ...;
+// @import '..';
 
 // Declarations
-a, a:after, input, .btn, textarea, select {
-  transition-property: opacity, background, color, border, box-shadow, outline, transform;
+a, a:after, input, .btn, textarea, select, .o-modal, path, rect, .c-checkbox__bg {
+  transition-property: opacity, background, color, border, box-shadow, outline, transform, stroke-dashoffset;
   transition-duration: 0.15s;
   backface-visibility: hidden;
 }

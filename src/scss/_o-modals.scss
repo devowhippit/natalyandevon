@@ -1,0 +1,55 @@
+/**
+ * Modal Component
+ */
+
+// Dependencies
+@import 'core/vars';
+// @import 'animate.scss/vendor/assets/stylesheets/animate.scss';
+// @import 'animate.scss/vendor/assets/stylesheets/animate/fadeIn.scss';
+// @import 'animate.scss/vendor/assets/stylesheets/animate/fadeInUpBig.scss';
+
+// Declarations
+.o-modal {
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: fixed
+}
+
+.o-modal-control:checked + .o-modal {
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+  // @include animate(fadeIn, 0.5s);
+
+}
+
+.o-modal-control:checked + .o-modal > .o-modal__wrap {
+
+  opacity: 1;
+  // @include animate(fadeInUpBig, 1s);
+  // animation-delay: 0.25s;
+
+}
+
+.o-modal__close {
+  // font
+}
+
+// @media only screen and (max-width: map-get($breakpoints, 'screen-mobile')) {
+
+//   .o-modal {
+//     position: static
+//   }
+
+//   .touchevents .o-modal-control:checked + .o-modal + .o-modal-disable-scroll {
+//     display: none
+//   }
+
+// }
+

@@ -23,11 +23,29 @@ $vars:(
   ), (
     name: blue-dark,
     hex: #001D43
+  ), (
+    name: green-light,
+    hex: #D3FFD2
+  ), (
+    name: green-mid,
+    hex: #ADDDAC
+  ), (
+    name: green-dark,
+    hex: #2D3A2E
   )),
   media: (
     screen-desktop: 960,
     screen-tablet: 768,
     screen-mobile: 480,
     screen-sm-mobile: 400
-  )
+  ),
+  indexes: (
+    0: 0,
+    1: 1010,
+    2: 1020,
+    3: 1030,
+    4: 1040,
+    -1: -1
+  ),
+  mix-blend-modes: (normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, luminosity)
 );

@@ -38,16 +38,30 @@
   background-position: center bottom
 }
 
+// .bp-33_33 {
+//   background-position: 33% 33%
+// }
+
+// .bp-66_33 {
+//   background-position: 66% 33%
+// }
+
+// .bp-99_33 {
+//   background-position: 99% 33%
+// }
+
+// .bp-33_66 {
+//   background-position: 33% 66%
+// }
+
+// .bp-66_66 {
+//   background-position: 66% 66%
+// }
+
 .bs-h-100 {
   background-size: auto 100%
 }
 
 .bs-w-100 {
   background-size: 100% auto
-}
-
-.img-full {
-  height: 100%;
-  width: auto;
-  max-width: inherit;
 }

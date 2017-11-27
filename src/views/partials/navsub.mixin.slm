@@ -1,3 +1,0 @@
-= mixin('navsub')
-  nav class='c-nav-inline-block va-middle'
-    a href='https://github.com/' Github

@@ -1,0 +1,93 @@
+/**
+ * Checkbox
+ */
+
+// Dependencies
+// @import 'core/grid.vars';
+@import 'core/fonts.vars';
+
+// Declarations
+.c-checkbox {
+  position: relative;
+  overflow: hidden;
+  border-color: transparent;
+  display: inline-block;
+}
+
+// .btn.c-checkbox {
+//   padding-top: 13px;
+//   padding-bottom: 13px;
+// }
+
+.c-checkbox input {
+  position: absolute;
+  right: 110%;
+  z-index: 1;
+}
+
+.c-checkbox__label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  pointer-events: none;
+  position: relative;
+  top: 1px;
+}
+
+.c-checkbox__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  // border: 1px solid;
+  box-sizing: border-box;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+// .c-checkbox:hover .c-checkbox__bg,
+// .c-checkbox input:focus ~ .c-checkbox__bg {
+//   background-color: white;
+// }
+
+// .c-checkbox input:checked ~ .c-checkbox__bg {
+//   background-color: white;
+//   border-color: transparent;
+// }
+
+// .c-checkbox input:checked ~ .c-checkbox__input {
+//   background: orange;
+//   border-color: transparent;
+// }
+
+.c-checkbox__input {
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  position: relative;
+  z-index: 1
+}
+
+.c-checkbox > * {
+  vertical-align: middle
+}
+
+.c-checkbox__checkmark {
+  display: block
+}
+
+.c-checkbox__checkmark__path {
+  stroke: inherit;
+  stroke-width: 3.12px;
+  stroke-dashoffset: 29.78334;
+  stroke-dasharray: 29.78334
+}
+
+.c-checkbox input:checked ~ .c-checkbox__input .c-checkbox__checkmark .c-checkbox__checkmark__path {
+  stroke-dashoffset: 0
+}

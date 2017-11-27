@@ -18,8 +18,10 @@
   h3 class='ffs-dlig m-bottom-3' June 16th 2018 • West Kill, New York
   div class='m-bottom'
     p Come celebrate. Save the dates have been sent! Formal invitation to follow.
-  button class='btn bg-blue-dark@hover' RSVP
+  label for='o-modal-control--rsvp' class='btn bg-blue-dark@hover' RSVP
 
 = content('body')
-  div class='bg-blue-light c-cell--stacked bs-cover' style='background-image: url(images/front.web.png)' &nbsp;
-  div class='bg-blue-dark c-cell--stacked bs-cover' style='background-image: url(images/back.web.png)' &nbsp;
+  div class='c-cell--stacked filter filter-multiply filter-green-light'
+    div class='wh-100p bs-cover filter filter-blue-dark filter-screen' style='background-image: url(images/front.web.png); background-position: 48% 64%;'
+  div class='c-cell--stacked filter filter-multiply filter-blue-light'
+    div class='wh-100p bs-cover filter filter-green-dark filter-screen' style='background-image: url(images/back.web.png); background-position: 48% 64%;'

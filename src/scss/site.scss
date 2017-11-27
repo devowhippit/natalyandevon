@@ -4,6 +4,7 @@
 @import 'core/fonts';
 @import 'core/base';
 @import 'core/hyperlinks';
+@import 'core/forms';
 @import 'core/code';
 @import 'core/transitions';
 
@@ -26,6 +27,8 @@
 // Component namespaces are prefixed with 'c-'.
 @import 'c-navs';
 @import 'c-cells';
+@import 'c-textfield';
+@import 'c-checkbox';
 
 /*************************
  * Objects
@@ -34,7 +37,7 @@
 // Components and utilities within them. Examples include headers, footers, modals,
 // sliders, and charts. Not all Objects are required for each application and some
 // will require their own Objects. Object namespaces are prefixed with 'o-'.
-// @import 'o-...';
+@import 'o-modals';
 
 /************************
 * Utilities
@@ -48,10 +51,13 @@
 @import 'utilities/borders';
 @import 'utilities/grid';
 @import 'utilities/display';
+@import 'utilities/position';
+@import 'utilities/index';
 @import 'utilities/text';
 @import 'utilities/dimensions';
 @import 'utilities/svg';
 @import 'utilities/images';
 @import 'utilities/buttons';
 @import 'utilities/backgrounds';
+@import 'utilities/filters';
 

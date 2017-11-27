@@ -41,6 +41,43 @@
       background-color: $color
     }
 
+
+
+    // .c-checkbox.bg-#{$namespace}\@hover:hover input:checked ~ .c-checkbox__bg {
+    //   // background-color: $color;
+    // }
+
+    .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__input {
+      background-color: $color;
+    }
+
+    .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__input .c-checkbox__checkmark__path {
+      stroke: $text;
+    }
+
+    .c-checkbox.bg-#{$namespace}\@hover:hover .c-checkbox__bg {
+      background-color: $color;
+    }
+
+    .c-checkbox.bg-#{$namespace}\@hover:hover .c-checkbox__input {
+      background-color: $text !important;
+    }
+
+    .c-checkbox.bg-#{$namespace}\@hover:hover .c-checkbox__checkmark .c-checkbox__checkmark__path {
+      stroke: $color !important;
+    }
+    // .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__label {
+    //   color: $text;
+    // }
+
+    // .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__bg {
+    //   background-color: $text;
+    // }
+
+    // .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__input {
+    //   background: $text;
+    // }
+
   }
 
 }
@@ -70,9 +107,9 @@
       stroke: $color
     }
 
-    // .filter-#{$namespace}::before {
-    //   background: $color;
-    // }
+    .filter-#{$namespace}::before {
+      background: $color
+    }
 
   }
 

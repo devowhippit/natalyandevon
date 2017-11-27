@@ -1,0 +1,19 @@
+//
+// Mixins
+//
+
+// Dependencies
+// @import '...';
+
+// Declarations
+@mixin mbm-filters($mix-blend-modes) {
+
+  @each $mode in $mix-blend-modes {
+
+    .filter-#{$mode}::before {
+      mix-blend-mode: $mode;
+    }
+
+  }
+
+}
