@@ -1,71 +1,104 @@
-= partial('c-checkbox.slm')
-
 = mixin('rsvp')
 
-  form action='https://formspree.io/rsvp@natalyandevon.com' method='post' target='_blank' id='rsvp' name='rsvp' class='w-100p'
+  form action='https://formspree.io/rsvp@natalyandevon.com' method='post' target='_blank' name='rsvp' class='w-100p'
 
-    div class='m-bottom'
-      label for='email' class='hidden' Your Email Address
-      div class='c-textfield b'
-        input type='email' value='' name='_replyto' class='w-100p required email' id='email' placeholder='Your Email Address'
+    div data-js="rsvp"
 
-    div class='m-bottom'
-      label for='firstName' class='hidden' First Name
-      div class='c-textfield b'
-        input type='text' value='' name='First Name' class='w-100p' id='firstName' placeholder='First Name'
 
-    div class='m-bottom-3'
-      label for='lastName' class='hidden' Last Name
-      div class='c-textfield b'
-        input type='text' value='' name='Last Name' class='w-100p' id='lastName' placeholder='Last Name'
+      fieldset class='m-bottom-3'
 
-    div class='h2 ta-center' Diet
+        h3 class='m-bottom-3' Your...
 
-    div class='m-bottom'
-      label class='btn c-checkbox bg-blue-dark@hover' for='vegetarian'
-        input id='vegetarian' name='Vegetarian' type='checkbox' value='Yes'
-        span class='c-checkbox__input'
-          svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-            path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-        span class='c-checkbox__label' Are you vegetarian?
-        span class='c-checkbox__bg'
+        div class='d-flex m-bottom'
 
-    div class='m-bottom-3'
-      label class='btn c-checkbox bg-blue-dark@hover' for='glutenFree'
-        input id='glutenFree' name='Gluten Free' type='checkbox' value='Yes'
-        span class='c-checkbox__input'
-          svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-            path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-        span class='c-checkbox__label' Are you gluten free?
-        span class='c-checkbox__bg'
+          div class='f-1 p-right'
+            label for='firstName' class='hidden' First Name
+            div class='c-textfield b-bottom'
+              input type='text' value='' name='First Name' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests'
 
-    div class='h2 ta-center' Accommodations
+          div class='f-1 p-left'
+            label for='lastName' class='hidden' Last Name
+            div class='c-textfield b-bottom'
+              input type='text' value='' name='Last Name' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests'
 
-    div class='m-bottom'
-      label class='btn c-checkbox bg-blue-dark@hover' for='camping'
-        input id='camping' name='Camping' type='checkbox' value='Yes'
-        span class='c-checkbox__input'
-          svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-            path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-        span class='c-checkbox__label' Do you plan to camp at the farm?
-        span class='c-checkbox__bg'
+        label for='email' class='hidden' Email Address
+        div class='c-textfield b-bottom'
+          input type='email' value='' name='_replyto' class='w-100p' id='email' placeholder='Email Address' required='true'
 
-    div class='m-bottom-3'
-      label class='btn c-checkbox bg-blue-dark@hover' for='catskillsSeasonsInn'
-        input id='catskillsSeasonsInn' name='Catskills Seasons Inn' type='checkbox' value='Yes'
-        span class='c-checkbox__input'
-          svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-            path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-        span class='c-checkbox__label' Do you plan to stay at the Catskills Seasons Inn?
-        span class='c-checkbox__bg'
 
-    div style='position: fixed; left: -100%;' aria-hidden='true'
-      input type='text' name='_gotcha'
-      input type='hidden' name='_next' value='/confirm'
-      input type='hidden' name='_subject' value='New RSVP'
-      input type='hidden' name='_cc' value='devon@natalyandevon.com'
+      fieldset class='m-bottom-3'
 
-    div class='ta-center m-bottom-3'
-      button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Send
+        h3 class='m-bottom-3' Are you...
 
-    p class='ta-center p-horizontal' If there's any issue with the form above email us directly; rsvp@natalyandevon.com
+        label class='btn c-checkbox bg-blue-dark@hover m-bottom m-horizontal' for='vegetarian'
+          input id='vegetarian' name='Vegetarian' type='checkbox' value='Yes'
+          span class='c-checkbox__input'
+            svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+              path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+          span class='c-checkbox__label' Vegetarian?
+          span class='c-checkbox__bg'
+
+        label class='btn c-checkbox bg-blue-dark@hover m-bottom mhorizontal' for='glutenFree'
+          input id='glutenFree' name='Gluten Free' type='checkbox' value='Yes'
+          span class='c-checkbox__input'
+            svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+              path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+          span class='c-checkbox__label' Or Gluten free?
+          span class='c-checkbox__bg'
+
+
+      fieldset class='m-bottom-3'
+
+        h3 class='m-bottom-3' Do you plan to...
+
+        div class='m-bottom'
+          label class='btn c-checkbox bg-blue-dark@hover' for='catskillsSeasonsInn'
+            input id='catskillsSeasonsInn' name='Catskills Seasons Inn' type='checkbox' value='Yes'
+            span class='c-checkbox__input'
+              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            span class='c-checkbox__label' Stay at the Catskills Seasons Inn?
+            span class='c-checkbox__bg'
+
+        div class='m-bottom'
+          label class='btn c-checkbox bg-blue-dark@hover' for='camping'
+            input id='camping' name='Camping' type='checkbox' value='Yes'
+            span class='c-checkbox__input'
+              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            span class='c-checkbox__label' Or camp on the farm?
+            span class='c-checkbox__bg'
+
+
+      fieldset class='m-bottom-3' v-if='guest.guests != false'
+
+        h3 class='m-bottom-3' Which guests will be attending with you?
+
+        label class='btn c-checkbox bg-blue-dark@hover m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
+          input v-bind:id='g.firstName + g.lastName' v-bind:name='g.firstName + " " + g.lastName' type='checkbox' value='Yes'
+          span class='c-checkbox__input'
+            svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+              path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+          span class='c-checkbox__label' {{ g.firstName }} {{ g.lastName }}
+          span class='c-checkbox__bg'
+
+      div style='position: fixed; left: -100%;' aria-hidden='true'
+        input type='text' name='_gotcha'
+        input type='hidden' name='_next' value='/confirm'
+        input type='hidden' name='_subject' value='New RSVP'
+        input type='hidden' name='_cc' value='devon@natalyandevon.com'
+
+      div class='ta-center m-bottom-3'
+        button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Finish and Send RSVP
+
+    p class='ta-center p-horizontal' == "If there's any issue with the form above email us directly; rsvp@natalyandevon.com"
+
+  = content('script')
+    javascript:
+      var main = new main();
+      var rsvp = main.rsvp;
+
+      main.rsvp({'setting': false}, {'data': 'Name'});
+
+
+

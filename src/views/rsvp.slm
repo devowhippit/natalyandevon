@@ -5,6 +5,7 @@
 = partial('partials/head.mixin.slm')
 = partial('partials/header.mixin.slm')
 = partial('partials/nav.mixin.slm')
+= partial('partials/rsvp.mixin.slm')
 
 / Content blocks
 = content('head')
@@ -13,13 +14,9 @@
 = content('title')
   header
     h1 class='hidden' Natalya & Devon
-    h2 class='' Natalya & Devon are getting married
+    h2 RSVP
 
-  h3 class='ffs-dlig m-bottom-3' June 16th 2018 • West Kill, New York
-  div class='m-bottom'
-    p Come celebrate. Save the dates have been sent! Formal invitation to follow.
-  / label for='o-modal-control--rsvp' class='btn bg-blue-dark@hover' RSVP
-  a class='btn bg-blue-dark@hover' href='rsvp' title='RSVP' RSVP
+  = mixin('rsvp')
 
 = content('body')
   div class='c-cell--stacked filter filter-multiply filter-green-light'

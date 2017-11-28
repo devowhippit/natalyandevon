@@ -10,6 +10,8 @@
 // Declarations
 .btn {
   @include all-caps;
+  @include font-aliased;
+
   font-size: $font-size-base;
   line-height: $font-size-base;
 

@@ -1,7 +1,9 @@
 'use strict';
 
-export default CONSTANTS = {
+const CONSTANTS = {
   'STRING': 'string',
   'NUMBER': 0,
   'FLOAT': 0.00
-};
+}
+
+export default CONSTANTS;

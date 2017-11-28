@@ -11,7 +11,7 @@ a {
   text-decoration: none;
   position: relative;
 
-  &:after {
+  &:not(.btn):after {
     content: '';
     border-bottom: 2px solid;
     position: absolute;
@@ -21,11 +21,11 @@ a {
     opacity: 0;
   }
 
-  &:hover:after {
+  &:not(.btn):hover:after {
     opacity: 1;
   }
 
-  &:visited {
+  &:not(.btn):visited {
     color: map-get($colors, 'blue-mid');
   }
 }
