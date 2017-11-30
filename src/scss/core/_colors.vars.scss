@@ -83,5 +83,23 @@ $primary:
     color: 'green-light',
     text: 'green-dark',
     hyperlinks: 'green-dark'
+  ),
+  (
+    namespace: 'red-dark',
+    color: 'red-dark',
+    text: 'red-light',
+    hyperlinks: 'red-light'
+  ),
+  (
+    namespace: 'red-mid',
+    color: 'red-mid',
+    text: 'red-dark',
+    hyperlinks: 'red-dark'
+  ),
+  (
+    namespace: 'red-light',
+    color: 'red-light',
+    text: 'red-dark',
+    hyperlinks: 'red-dark'
   );
 
