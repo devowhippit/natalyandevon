@@ -27,4 +27,13 @@
   opacity: 0.5
 }
 
+.filter-fade::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  bottom: 0;
+  z-index: 1
+}
+
 @include mbm-filters(map-get($vars, 'mix-blend-modes'));

@@ -28,13 +28,14 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin: 10px 0;
   font-family: $font-bold;
-  line-height: 20px;
+  line-height: $line-height-base;
   color: inherit;
   text-rendering: optimizelegibility
 }
 
 h1, .h1 {
-  font-size: em(38px, $font-size-base)
+  font-size: em(38px, $font-size-base);
+  line-height: 40px
 }
 
 h2, .h2 {
@@ -46,19 +47,23 @@ h2, .h2 {
 h3, .h3 {
   font-family: $font-family;
   font-weight: normal;
-  font-size: em(24px, $font-size-base);
+  font-size: em(26px, $font-size-base);
+  line-height: 28px
 }
 
 h4, .h4 {
-  font-size: em(18px, $font-size-base)
+  font-size: em(18px, $font-size-base);
+  line-height: 20px
 }
 
 h5, .h5 {
-  font-size: em(14px, $font-size-base)
+  font-size: em(14px, $font-size-base);
+  line-height: 16px
 }
 
 h6, .h6 {
-  font-size: em(11.9px, $font-size-base)
+  font-size: em(12px, $font-size-base);
+  line-height: 14px
 }
 
 .all-caps {

@@ -1,0 +1,24 @@
+= partial('../partials/footer.mixin.slm')
+/ = partial('../partials/rsvp.mixin.slm')
+
+doctype html
+html lang='en'
+
+  = content('head')
+
+body style='visibility: hidden;' onload='load()' class='bg-blue-light'
+
+  header class='filter filter-multiply filter-green-light'
+    div class='mh-100vh bs-cover filter filter-blue-dark filter-screen filter-fade' style='background-image: url(images/front.web.png); background-position: 50% 0%;'
+
+      div class='wrap ta-center d-flex ai-center mh-66vh'
+        div class='m-auto' style='max-width: 474px'
+          = content('title')
+
+  main class='bg-blue-dark f-smooth'
+    div class='wrap ta-center'
+      = content('body')
+
+  script src='scripts/main.dist.js'
+
+  = content('script')

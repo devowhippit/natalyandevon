@@ -28,24 +28,11 @@
       color: $hyperlink
     }
 
-    // .btn.bg-#{$namespace}:focus,
-    // .btn.bg-#{$namespace}:active,
-    // html:not(.touchevents) .btn.bg-#{$namespace}:hover {
-    //   color: $text;
-    //   background-color: darken($color, $delta-psuedo);
-    // }
-
     html:not(.touchevents) .btn.bg-#{$namespace}\@hover:hover {
       color: $text;
       border-color: $color;
       background-color: $color
     }
-
-
-
-    // .c-checkbox.bg-#{$namespace}\@hover:hover input:checked ~ .c-checkbox__bg {
-    //   // background-color: $color;
-    // }
 
     .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__input {
       background-color: $color;
@@ -66,17 +53,14 @@
     .c-checkbox.bg-#{$namespace}\@hover:hover .c-checkbox__checkmark .c-checkbox__checkmark__path {
       stroke: $color !important;
     }
-    // .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__label {
-    //   color: $text;
-    // }
 
-    // .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__bg {
-    //   background-color: $text;
-    // }
+    .filter-#{$namespace}::before {
+      background: $color
+    }
 
-    // .c-checkbox.bg-#{$namespace}\@hover input:checked ~ .c-checkbox__input {
-    //   background: $text;
-    // }
+    .filter-#{$namespace}.filter-fade::after {
+      background: linear-gradient(to bottom, rgba($color, 0) 0%, $color 100%);
+    }
 
   }
 
@@ -105,10 +89,6 @@
 
     .stroke-#{$namespace} {
       stroke: $color
-    }
-
-    .filter-#{$namespace}::before {
-      background: $color
     }
 
   }

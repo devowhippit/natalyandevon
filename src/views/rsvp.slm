@@ -9,7 +9,7 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'Natalya and Devon')
+  = mixin('head', 'RSVP • Natalya and Devon')
 
 = content('title')
   header
