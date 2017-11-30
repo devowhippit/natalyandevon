@@ -35,7 +35,8 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
   font-size: em(38px, $font-size-base);
-  line-height: 40px
+  line-height: 40px;
+  @include regular-caps
 }
 
 h2, .h2 {
@@ -48,22 +49,30 @@ h3, .h3 {
   font-family: $font-family;
   font-weight: normal;
   font-size: em(26px, $font-size-base);
-  line-height: 28px
+  line-height: 28px;
+  @include regular-caps
 }
 
 h4, .h4 {
   font-size: em(18px, $font-size-base);
-  line-height: 20px
+  line-height: 20px;
+  @include regular-caps
 }
 
 h5, .h5 {
   font-size: em(14px, $font-size-base);
-  line-height: 16px
+  line-height: 16px;
+  @include regular-caps
 }
 
 h6, .h6 {
   font-size: em(12px, $font-size-base);
-  line-height: 14px
+  line-height: 14px;
+  @include regular-caps
+}
+
+.regular-caps {
+  @include regular-caps
 }
 
 .all-caps {
@@ -77,7 +86,8 @@ a {
 p a {
   font-family: $font-family;
   text-transform: none;
-  letter-spacing: 0
+  letter-spacing: 0;
+  text-decoration: underline;
 }
 
 pre, code {

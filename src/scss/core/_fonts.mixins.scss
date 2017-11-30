@@ -34,6 +34,12 @@
   font-family: $font-system
 }
 
+@mixin regular-caps() {
+  font-family: $font-family;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 @mixin all-caps() {
   font-family: $font-bold;
   text-transform: uppercase;

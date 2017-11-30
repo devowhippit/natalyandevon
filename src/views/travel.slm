@@ -1,0 +1,95 @@
+/ Layout
+= extend('layouts/page-north-south-lake')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Travel • Natalya and Devon')
+
+= content('title')
+  h1 class='hidden' Natalya & Devon
+  h2 class='m-bottom-2' Travel
+
+  h3 class='ffs-dlig m-bottom-3' The heart of the Catskills is only 3 hours from the Big Apple and 2.5 hours from Albany.
+  div class='ta-left m-bottom'
+    p There are regular Trailways buses to and from New York City ($60 each way), but we recommend renting a car or carpooling if you want to explore the area. If you can, we encourage you to take a long weekend to enjoy the spectacular hiking and charming local breweries and restaurants.
+
+  nav
+    a href='#nyc' class='m-horizontal' From New York City
+    a href='#albany' class='m-horizontal' From Albany
+
+= content('body')
+  section#nyc class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      div class='m-auto' style='max-width: 474px'
+        h1 class='h2 m-bottom-3' From New York City
+
+        h2 class='h3 m-bottom-3' New York City Airports
+        p class='ta-left' Newark may be the best if you plan to drive directly to West Kill upon landing. La Guardia and John F. Kennedy have buses, trains, and cabs that can get you into the city if you plan to stay before heading up to West Kill. We recommend comparing all three for affordability.
+
+      table class='table ta-left m-auto m-bottom-3'
+        tr
+          td Newark International Airport
+          td Lands in New Jersey. Cab or train into the city or drive to West Kill.
+        tr
+          td La Guardia Airport
+          td Lands in North Queens. Cab or take bus to to train into city.
+        tr
+          td John F. Kennedy International Airport
+          td Lands in South Queens. Cab or train into the city.
+
+      div class='m-auto' style='max-width: 474px'
+        h2 class='h3 p-top-3 m-bottom-3' From the airport
+        p class='ta-left' Renting a car at the airport may be the fastest and most convenient option but there are a few extras.
+
+      table class='table ta-left m-auto m-bottom-3'
+        tr
+          td Car
+          td Rent from any of the airports.
+        tr
+          td
+            a href='https://trailwaysny.com/' target='_blank' Bus
+          td Trailways Bus Line to Woodstock or Phoenicia and rent a car.
+        tr
+          td
+            a href='http://www.mta.info/mnr' target='_blank' Train
+          td Metro North Hudson Line to Poughkeepsie and rent a car.
+
+      div class='m-auto' style='max-width: 474px'
+        h2 class='h3 p-top-3 m-bottom-3' Places to Visit on the Way
+
+      table class='table ta-left m-auto'
+        tr
+          td
+            a href='www.tuthilltown.com' target='_blank' Tuthilltown Distillery
+          td famous New York small-batch whiskey, and now gin.
+        tr
+          td Gunk Haus
+          td delicious German eatery with a great beer selection.
+
+  section#albany class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      h1 class='h2 m-bottom-3' From Albany
+
+      div class='m-auto' style='max-width: 474px'
+        h2 class='h3 p-top-3 m-bottom-3' From the airport
+        p class='ta-left'
+          | While we don't have much experience coming from Albany, most of the same commuting options to West Kill are available. It's also a slightly shorter ride given traffic and distance.
+
+      table class='table ta-left m-auto'
+        tr
+          td Car
+          td Rent from the airports.
+        tr
+          td
+            a href='https://trailwaysny.com/' target='_blank' Bus
+          td Trailways Bus Line to Woodstock or Phoenicia and rent a car.
+
+  section class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      a class='btn bg-green-light@hover' href='activities' title='What to do in the Catskills' What to do in the Catskills
+
