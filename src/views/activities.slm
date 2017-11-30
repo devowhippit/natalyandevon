@@ -1,0 +1,89 @@
+/ Layout
+= extend('layouts/page-town-tinker')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Activities • Natalya and Devon')
+
+= content('title')
+  h1 class='hidden' Natalya & Devon
+  h2 class='m-bottom-2' Activities
+
+  h3 class='ffs-dlig m-bottom-3' A wide range of outdoor (and some indoor!) activities await.
+  div class='ta-left m-bottom'
+    p Something here about all of the wonderful activities.
+
+  nav
+    a href='#hiking' class='m-horizontal' Hiking
+    a href='#river' class='m-horizontal' River
+    a href='#resorts' class='m-horizontal' Resorts
+    a href='#eating' class='m-horizontal' Eating
+    a href='#towns' class='m-horizontal' Towns
+
+= content('body')
+  section#hiking class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      div class='m-auto' style='max-width: 474px'
+        h1 class='h2 m-bottom-3' Hiking
+
+        p class='ta-left' About hiking
+
+      table class='table ta-left m-auto m-bottom-3'
+        tr
+          td Diamond Notch
+          td Lands in New Jersey. Cab or train into the city or drive to West Kill.
+        tr
+          td Hunter Mountain
+          td Lands in North Queens. Cab or take bus to to train into city.
+        tr
+          td West Kill Wilderness
+          td Lands in South Queens. Cab or train into the city.
+        tr
+          td North Lake Hike
+          td Lands in South Queens. Cab or train into the city.
+        tr
+          td Kaaterskill Falls
+          td Lands in South Queens. Cab or train into the city.
+
+  section#river class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      div class='m-auto' style='max-width: 474px'
+        h1 class='h2 m-bottom-3' River
+
+        p class='ta-left' About river
+
+  section#resorts class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      div class='m-auto' style='max-width: 474px'
+        h1 class='h2 m-bottom-3' Resorts
+
+        p class='ta-left' About resorts
+
+  section#eating class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      div class='m-auto' style='max-width: 474px'
+        h1 class='h2 m-bottom-3' Eating
+
+        p class='ta-left' About eating
+
+  section#towns class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      div class='m-auto' style='max-width: 474px'
+        h1 class='h2 m-bottom-3' Towns
+
+        p class='ta-left' About towns
+
+      table class='table ta-left m-auto m-bottom-3'
+        tr
+          td Woodstock
+          td Yes, the Woodstock you are thinking of.
+
+  section class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      a class='btn bg-green-light@hover' href='rsvp' title='RSVP' RSVP
+

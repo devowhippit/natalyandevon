@@ -26,6 +26,6 @@ a {
   }
 
   &:not(.btn):visited {
-    color: map-get($colors, 'blue-mid');
+    color: inherit;
   }
 }

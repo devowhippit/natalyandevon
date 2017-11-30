@@ -23,6 +23,6 @@
 
 = content('body')
   div class='c-cell--stacked filter filter-multiply filter-green-light'
-    div class='wh-100p bs-cover filter filter-blue-dark filter-screen' style='background-image: url(images/front.web.png); background-position: 48% 64%;'
+    div class='wh-100p bs-cover filter filter-blue-dark filter-screen' style='background-image: url(images/img-hunter-mountain.png); background-position: 48% 64%;'
   div class='c-cell--stacked filter filter-multiply filter-blue-light'
-    div class='wh-100p bs-cover filter filter-green-dark filter-screen' style='background-image: url(images/back.web.png); background-position: 48% 64%;'
+    div class='wh-100p bs-cover filter filter-green-dark filter-screen' style='background-image: url(images/img-north-south-lake.png); background-position: 48% 64%;'
