@@ -11,15 +11,10 @@
 = content('head')
   = mixin('head', 'RSVP • Natalya and Devon')
 
-= content('title')
+= content('content')
   header
     h1 class='hidden' Natalya & Devon
     h2 RSVP
 
-  = mixin('rsvp')
-
-= content('body')
-  div class='c-cell--stacked filter filter-multiply filter-green-light'
-    div class='wh-100p bs-cover filter filter-blue-dark filter-screen' style='background-image: url(images/front.web.png); background-position: 48% 64%;'
-  div class='c-cell--stacked filter filter-multiply filter-blue-light'
-    div class='wh-100p bs-cover filter filter-green-dark filter-screen' style='background-image: url(images/back.web.png); background-position: 48% 64%;'
+  main class='bg-base-white'
+    = mixin('rsvp')

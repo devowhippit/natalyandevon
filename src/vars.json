@@ -55,10 +55,9 @@
     }
   ],
   "media": {
-    "screen-desktop": 960,
-    "screen-tablet": 768,
-    "screen-mobile": 480,
-    "screen-sm-mobile": 400
+    "large": 1024,
+    "medium": 768,
+    "small": 480
   },
   "indexes": {
     "4": 1040,
@@ -85,5 +84,11 @@
     "saturation",
     "color",
     "luminosity"
-  ]
+  ],
+  "animate": {
+    "ease-in-quint": "cubic-bezier(0.755, 0.05, 0.855, 0.06)",
+    "ease-out-quint": "cubic-bezier(0.23, 1, 0.32, 1)",
+    "animate-scss-speed": "0.75s",
+    "animate-timing-function": "cubic-bezier(0.23, 1, 0.32, 1)"
+  }
 }

@@ -3,7 +3,7 @@
  */
 
 // Dependencies
-// @import '...';
+@import '../core/utility.mixins';
 
 // Declarations
 .b {
@@ -31,30 +31,61 @@
   border-right-style: solid
 }
 
-.b-2 {
-  border-width: 2px
+.b-solid {
+  border-style: solid;
 }
 
-.b-3 {
-  border-width: 3px
-}
+$border: (
+  border-width: (
+    (bw-0, 0px),
+    (bw-1, 1px),
+    (bw-2, 2px),
+    (bw-3, 3px),
+    (bw-4, 4px),
+    (bw-8, 8px),
+    (bw-16, 16px),
+    (bw-24, 24px)
+  ),
+  border-top-width: (
+    (btw-0, 0px),
+    (btw-1, 1px),
+    (btw-2, 2px),
+    (btw-3, 3px),
+    (btw-4, 4px),
+    (btw-8, 8px),
+    (btw-16, 16px),
+    (btw-24, 24px)
+  ),
+  border-left-width: (
+    (blw-0, 0px),
+    (blw-1, 1px),
+    (blw-2, 2px),
+    (blw-3, 3px),
+    (blw-4, 4px),
+    (blw-8, 8px),
+    (blw-16, 16px),
+    (blw-24, 24px)
+  ),
+  border-bottom-width: (
+    (bbw-0, 0px),
+    (bbw-1, 1px),
+    (bbw-2, 2px),
+    (bbw-3, 3px),
+    (bbw-4, 4px),
+    (bbw-8, 8px),
+    (bbw-16, 16px),
+    (bbw-24, 24px)
+  ),
+  border-right-width: (
+    (brw-0, 0px),
+    (brw-1, 1px),
+    (brw-2, 2px),
+    (brw-3, 3px),
+    (brw-4, 4px),
+    (brw-8, 8px),
+    (brw-16, 16px),
+    (brw-24, 24px)
+  )
+);
 
-.b-4 {
-  border-width: 4px
-}
-
-.b-5 {
-  border-width: 5px
-}
-
-.b-6 {
-  border-width: 6px
-}
-
-.b-7 {
-  border-width: 7px
-}
-
-.b-none {
-  border: none !important
-}
+@include make-utilities($border);

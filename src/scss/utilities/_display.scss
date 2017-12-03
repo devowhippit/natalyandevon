@@ -3,12 +3,11 @@
  */
 
 // Dependencies
+@import '../core/utility.mixins';
 @import '../core/grid.vars';
 @import '../core/display.mixins';
 
 // Declarations
-@include display();
-
 .hidden {
   position: absolute;
   width: 0;
@@ -48,50 +47,41 @@
   order: -1
 }
 
-.jc-start {
-  justify-content: flex-start
+.bs-border-box {
+  box-sizing: border-box
 }
 
-.jc-end {
-  justify-content: flex-end
+.bs-content-box {
+  box-sizing: content-box
 }
 
-.jc-center {
-  justify-content: center
-}
+$display: (
+  display: (
+    (d-flex, flex),
+    (d-table, table),
+    (d-inline-block, inline-block),
+    (d-block, block),
+    (d-inline, inline),
+    (d-none, none)
+  ),
+  justify-content: (
+    (jc-start, flex-start),
+    (jc-end, flex-end),
+    (jc-center, center)
+  ),
+  align-items: (
+    (ai-start, flex-start),
+    (ai-end, flex-end),
+    (ai-center, center),
+    (ai-stretch, stretch),
+    (ai-baseline, baseline)
+  ),
+  flex-direction: (
+    (fd-column, column),
+    (fd-column-reverse, column-reverse),
+    (fd-row, row),
+    (fd-row-reverse, row-reverse)
+  )
+);
 
-.ai-start {
-  align-items: flex-start
-}
-
-.ai-end {
-  align-items: flex-end
-}
-
-.ai-center {
-  align-items: center
-}
-
-.ai-stretch {
-  align-items: stretch
-}
-
-.ai-baseline {
-  align-items: baseline
-}
-
-.fd-column {
-  flex-direction: column
-}
-
-.fd-column-reverse {
-  flex-direction: column-reverse
-}
-
-.fd-row {
-  flex-direction: row
-}
-
-.fd-row-reverse {
-  flex-direction: row-reverse
-}
+@include make-utilities($display);

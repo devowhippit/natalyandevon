@@ -1,5 +1,4 @@
 = partial('../partials/footer.mixin.slm')
-/ = partial('../partials/rsvp.mixin.slm')
 
 doctype html
 html lang='en'
@@ -8,29 +7,7 @@ html lang='en'
 
 body style='visibility: hidden;' onload='load()'
 
-  / input class='o-modal-control d-none' type='checkbox' name='o-modal-control--rsvp' id='o-modal-control--rsvp'
-
-  / article class='o-modal zi-4 o-scroll bg-base-white' aria-hidden='true'
-  /   div class='o-modal__wrap p-relative'
-  /     label for='o-modal-control--rsvp' class='overlay p-absolute'
-  /     div class='wrap wrap-max-1 d-flex ai-center'
-  /       div class='mh-100vh d-flex ai-center m-auto'
-  /         div class='p-relative'
-  /           label for='o-modal-control--rsvp' class='p-absolute top right c-pointer' ×
-  /           header class='ta-center'
-  /             h1 class='h2' RSVP
-  /           = mixin('rsvp')
-
-  main class='d-flex jc-end ai-stretch bg-base-white o-modal-disable-scroll'
-
-    div class='f-1 h-100vh o-scroll'
-      div class='mh-100vh d-flex ai-center'
-        div class='p-horizontal-2 w-100p ta-center'
-          = content('title')
-
-    div class='f-1 mh-100vh d-flex fd-column'
-      = content('body')
+  = content('content')
 
   script src='scripts/main.dist.js'
-
   = content('script')

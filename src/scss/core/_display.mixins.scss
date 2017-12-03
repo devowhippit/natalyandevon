@@ -13,31 +13,3 @@
 @mixin inset() {
   box-shadow: inset 0 4px 18px rgba(0,0,0,0.4);
 }
-
-@mixin display($variant: '') {
-
-  .d-flex#{$variant} {
-    display: flex !important
-  }
-
-  .d-table#{$variant} {
-    display: table !important
-  }
-
-  .d-inline-block#{$variant} {
-    display: inline-block !important
-  }
-
-  .d-block#{$variant} {
-    display: block !important
-  }
-
-  .d-inline#{$variant} {
-    display: inline !important
-  }
-
-  .d-none#{$variant} {
-    display: none !important
-  }
-
-}

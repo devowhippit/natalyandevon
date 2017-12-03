@@ -6,6 +6,7 @@
 @import 'core/hyperlinks';
 @import 'core/forms';
 @import 'core/code';
+@import 'core/animate';
 @import 'core/transitions';
 
 /*************************
@@ -16,7 +17,7 @@
 // or object. Be sure to add 'node_modules' to your include paths if you are using
 // that to manage dependencies (recommended). Dependency examples include Bootstrap
 // or Material Components Web.
-// @import ...;
+@import 'animate.scss/vendor/assets/stylesheets/animate/fadeIn';
 
 /*************************
  * Components
@@ -61,4 +62,5 @@
 @import 'utilities/tables';
 @import 'utilities/backgrounds';
 @import 'utilities/filters';
+@import 'utilities/animations';
 

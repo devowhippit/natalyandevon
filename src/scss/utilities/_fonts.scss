@@ -18,6 +18,10 @@
   @include font-system
 }
 
+.ff-bold {
+  font-family: $font-bold
+}
+
 // font feature settings; https://blog.webtype.com/?p=4085
 .ffs-liga {
   font-feature-settings: 'liga'

@@ -3,6 +3,7 @@
  */
 
 // Dependencies
+@import '../core/utility.mixins';
 @import '../core/grid.vars';
 
 // Declarations
@@ -19,38 +20,63 @@
   height: 100%
 }
 
-.mh-25vh {
-  min-height: 25vh
-}
+// .mh-25vh {
+//   min-height: 25vh
+// }
 
-.mh-33vh {
-  min-height: 33.33vh
-}
+// .mh-33vh {
+//   min-height: 33.33vh
+// }
 
-.mh-50vh {
-  min-height: 50vh
-}
+// .mh-50vh {
+//   min-height: 50vh
+// }
 
-.mh-66vh {
-  min-height: 66.66vh
-}
+// .mh-66vh {
+//   min-height: 66.66vh
+// }
 
-.mh-75vh {
-  min-height: 75vh
-}
+// .mh-75vh {
+//   min-height: 75vh
+// }
 
-.mh-100vh {
-  min-height: 100vh
-}
+// .mh-100vh {
+//   min-height: 100vh
+// }
 
-.mh-125vh {
-  min-height: 125vh
-}
+// .mh-125vh {
+//   min-height: 125vh
+// }
 
-.mh-25vh {
-  min-width: 25vh
-}
+// .mh-25vh {
+//   min-width: 25vh
+// }
 
-.h-100vh {
-  height: 100vh
-}
+// .h-100vh {
+//   height: 100vh
+// }
+
+$dimensions: (
+  height: (
+    (h-25vh, 25vh),
+    (h-33vh, 33.33vh),
+    (h-50vh, 50vh),
+    (h-66vh, 66.66vh),
+    (h-75vh, 75vh),
+    (h-100vh, 100vh),
+    (h-125vh, 125vh),
+    (h-100vh, 100vh),
+  ),
+  min-height: (
+    (mh-25vh, 25vh),
+    (mh-33vh, 33.33vh),
+    (mh-50vh, 50vh),
+    (mh-66vh, 66.66vh),
+    (mh-75vh, 75vh),
+    (mh-100vh, 100vh),
+    (mh-125vh, 125vh),
+    (mh-100vh, 100vh),
+  )
+);
+
+@include make-utilities($dimensions);
