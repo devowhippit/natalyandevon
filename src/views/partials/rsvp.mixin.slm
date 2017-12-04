@@ -9,7 +9,7 @@
         h3 class='m-bottom-3' Your response
 
         label class='d-block c-checkbox m-bottom' for='attending-yes'
-          input id='attending-yes' name='Attending' type='radio' value='Yes' v-model='response'
+          input id='attending-yes' name='Attending' type='radio' value='Yes' required='true' v-model='response'
           span class='c-checkbox__input'
             svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
               path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
@@ -18,7 +18,7 @@
           span class='c-checkbox__bg'
 
         label class='d-block c-checkbox m-bottom' for='attending-no'
-          input id='attending-no' name='Attending' type='radio' value='No' v-model='response'
+          input id='attending-no' name='Attending' type='radio' value='No' required='true' v-model='response'
           span class='c-checkbox__input'
             svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
               path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'

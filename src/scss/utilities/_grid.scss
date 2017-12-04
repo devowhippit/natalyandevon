@@ -3,6 +3,7 @@
  */
 
 // Dependencies
+@import '../core/vars';
 @import '../core/grid.vars';
 @import '../core/grid.mixins';
 
@@ -10,6 +11,18 @@
 @include gutters($grid-base, 'm', 'margin', $grid-multiplier); // Make margin gutters
 
 @include gutters($grid-base, 'p', 'padding', $grid-multiplier); // Make padding gutters
+
+@each $breakpoint, $width in map-get($vars, 'media') {
+  @media only screen and (min-width: $width + 'px') {
+
+    $state: '\\@media-' + $breakpoint;
+
+    @include gutters($grid-base, 'm', 'margin', $grid-multiplier, $state);
+
+    @include gutters($grid-base, 'p', 'padding', $grid-multiplier, $state);
+
+  }
+}
 
 .p-0 {
   padding: 0 !important
