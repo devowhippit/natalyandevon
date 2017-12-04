@@ -1,5 +1,5 @@
 / Layout
-= extend('layouts/default')
+= extend('layouts/rsvp')
 
 / Partials
 = partial('partials/head.mixin.slm')
@@ -12,9 +12,9 @@
   = mixin('head', 'RSVP • Natalya and Devon')
 
 = content('content')
-  header
+  header class='ta-center p-top-3 m-top-3'
     h1 class='hidden' Natalya & Devon
     h2 RSVP
 
-  main class='bg-base-white'
+  main class='wrap m-auto p-bottom-3 m-bottom-3' style='max-width: 474px'
     = mixin('rsvp')

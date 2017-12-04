@@ -16,6 +16,7 @@ class rsvp {
       el: '[data-js="rsvp"]',
       data: {
         init: true,
+        response: true,
         guest: {
           firstName: '',
           lastName: '',

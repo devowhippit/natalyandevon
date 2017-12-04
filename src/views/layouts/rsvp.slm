@@ -1,0 +1,13 @@
+= partial('../partials/footer.mixin.slm')
+
+doctype html
+html lang='en'
+
+  = content('head')
+
+body style='visibility: hidden;' onload='load()' class='bg-blue-light'
+
+  = content('content')
+
+  script src='scripts/main.dist.js'
+  = content('script')

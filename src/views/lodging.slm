@@ -14,104 +14,116 @@
   h1 class='hidden' Natalya & Devon
   h2 class='m-bottom-2' Lodging
 
-  h3 class='ffs-dlig m-bottom-3' We recommend booking now.
+  h3 class='ffs-dlig m-bottom-3' The Catskills are a popular getaway destination. We recommend booking now.
   div class='ta-left m-bottom'
-    p The Catskills are a popular getaway destination in June and places fill up fast. The most affordable options are AirBnbs for groups and rooms at the Catskills Season’s Inn for singles and couples (discount code NATALYADEVON0616). Other charming choices abound.
+    p The most affordable options are AirBnbs for groups and rooms at the Catskills Season’s Inn for singles and couples (discount code NATALYADEVON0616). Other charming choices abound – just take a look below.
 
   nav
-    a href='#motels' class='m-horizontal' Motels
+    a href='#inns' class='m-horizontal' Inns
     a href='#airbnbs' class='m-horizontal' AirBnbs
     a href='#camping' class='m-horizontal' Camping
 
 = content('body')
-  section#motels class='p-vertical-3 m-vertical-3'
+  section#inns class='m-auto' style='max-width: 474px'
     div class='p-vertical-3 m-vertical-3'
-      div class='m-auto' style='max-width: 474px'
-        h1 class='h2' Motels
-        p
-          | Listed by distance. We've visited and vetted them all.
+      div class='p-vertical-3 m-vertical-3'
+        h1 class='h2' Inns
+        p class='ta-left'
+          | Listed by distance. We've visited and vetted every one here. For the Catskills Seasons Inn, use promo code NATALYADEVON0616.
 
-      table class='table ta-left m-auto m-bottom-3'
-        tr
-          td
-            a href='https://www.sprucetoninn.com/' target='_blank' Spruceton Inn
-          td
-            a href='' title='Directions' target='_blank' 1m
-          td $$$$
-          td Hipster outdoor hotel, bring your beanie.
-        tr
-          td
-            a href='http://www.catskillseasonsinn.com/' target='_blank' Catskills Season’s Inn
-          td
-            a href='' title='Directions' target='_blank' 2m
-          td $$
-          td Best price for value; discount code NATALYADEVON0616.
-        tr
-          td
-            a href='http://www.slidemountainmotel.com/' target='_blank' Slide Mountain Motel
-          td
-            a href='' title='Directions' target='_blank' 2m
-          td $
-          td Affordable, quirky motel.
-        tr
-          td
-            a href='http://www.phoeniciavillage.com/' target='_blank' Phoenicia Lodge
-          td
-            a href='' title='Directions' target='_blank' 2m
-          td $$$
-          td Cute red cabins.
-        tr
-          td
-            a href='http://www.thegrahamandco.com/' target='_blank' Graham & Co
-          td
-            a href='' title='Directions' target='_blank' 2m
-          td $$$$
-          td Another hipster hotel with a pool further away.
+        table class='table ta-left m-auto m-bottom-3'
+          tr
+            td
+              a href='https://www.sprucetoninn.com/' target='_blank' Spruceton Inn
+            td
+              a href='https://goo.gl/maps/oWb6EhX1daT2' title='Directions' target='_blank' 5m
+            td $$$$
+            td
+              p Hipster outdoor hotel, bring your beanie.
+          tr
+            td
+              a href='http://www.catskillseasonsinn.com/' target='_blank' Catskills Seasons Inn
+            td
+              a href='https://goo.gl/maps/xvYQruzR1462' title='Directions' target='_blank' 7m
+            td $$
+            td
+              p Best price for value.
+          tr
+            td
+              a href='http://www.slidemountainmotel.com/' target='_blank' Slide Mountain Motel
+            td
+              a href='https://goo.gl/maps/TUN8xgcpXrL2' title='Directions' target='_blank' 8m
+            td $
+            td
+              p Affordable, quirky motel.
+          tr
+            td
+              a href='http://www.phoeniciavillage.com/' target='_blank' Phoenicia Lodge
+            td
+              a href='https://goo.gl/maps/M6XmPwErMhy' title='Directions' target='_blank' 13m
+            td $$$
+            td
+              p Cute red cabins.
+          tr
+            td
+              a href='http://www.thegrahamandco.com/' target='_blank' Graham & Co
+            td
+              a href='https://goo.gl/maps/oD4GnPK1c742' title='Directions' target='_blank' 13m
+            td $$$$
+            td
+              p Hipster hotel with a pool.
 
-      a href='http://www.phoeniciany.com/stay/' target='_blank' See additional options
+        a class='btn bg-blue-light@hover' href='http://www.phoeniciany.com/stay/' target='_blank' See additional options
 
-  section#airbnbs class='p-vertical-3 m-vertical-3'
+  section#airbnbs class='m-auto' style='max-width: 474px'
+    div class='b-top m-auto' style='max-width: 200px'
     div class='p-vertical-3 m-vertical-3'
-      h1 class='h2 m-bottom-3' AirBnbs
-      a class='btn bg-blue-light@hover' href='http://bit.ly/2AfQLWB' target='_blank' View West Kill, NY AirBnbs for June 15-17th
+      div class='p-vertical-3 m-vertical-3'
+        h1 class='h2 m-bottom-3' AirBnbs
+        a class='btn bg-blue-light@hover' href='http://bit.ly/2AfQLWB' target='_blank' View Options for <span class='ws-nowrap'>June 15-17th</span>
 
-  section#camping class='p-vertical-3 m-vertical-3'
+  section#camping class='m-auto' style='max-width: 474px'
+    div class='b-top m-auto' style='max-width: 200px'
     div class='p-vertical-3 m-vertical-3'
-      div class='m-auto' style='max-width: 474px'
+      div class='p-vertical-3 m-vertical-3'
         h1 class='h2' Camping
-        p class='ta-left' We invite you to camp at Newton Farm. There are also NY State Dept. of Environmental Conservation campgrounds all over the Catskills. Below are just the closest to the farm. Fees are per night. Reservations can be made online through the links below. Primitive campgrounds are free but they are first come, first serve.
+        p class='ta-left' We invite you to camp at Newton Farm. There are also NY State Dept. of Environmental Conservation campgrounds all over the Catskills. Below are just the closest to the farm. Fees are per night. Reservations can be made online through the links below. Primitive campgrounds are free but they are first come, first served.
 
-      table class='table ta-left m-auto'
-        tr
-          td
-            a href='http://newtonfarmny.com/' target='_blank' Newton Farm
-          td
-            a href='https://goo.gl/maps/yb97zNMKjQ32' target='_blank' 0m
-          td Free
-          td Primitive camping. Farmhouse facilities.
-        tr
-          td
-            a href='http://www.dec.ny.gov/outdoor/41282.html' target='_blank' Primitive Camping off Rt. 28
-          td
-            a href='https://goo.gl/maps/yb97zNMKjQ32' target='_blank' 10.8m
-          td Free
-          td 4 - 5 sites. Small Pond access.
-        tr
-          td
-            a href='http://www.dec.ny.gov/outdoor/24501.html' target='_blank' Woodland Valley Campground
-          td
-            a href='https://goo.gl/maps/Jy5U7oviZ6G2' target='_blank' 17.8m
-          td $20-25
-          td Our favorite. Drive in campground with facilities.
-        tr
-          td
-            a href='http://www.dec.ny.gov/outdoor/24462.html' target='_blank'
-              | Devil's Tombstone Campground
-          td
-            a href='https://goo.gl/maps/vk6tw2X8h3P2' target='_blank' 18.3m
-          td $16-21
-          td Drive in campground. No facilities.
+        table class='table ta-left m-auto'
+          tr
+            td
+              a href='http://newtonfarmny.com/' target='_blank' Newton Farm
+            td
+              a href='https://goo.gl/maps/yb97zNMKjQ32' target='_blank' 0m
+            td Free
+            td
+              p Primitive camping. Farmhouse facilities.
+          tr
+            td
+              a href='http://www.dec.ny.gov/outdoor/41282.html' target='_blank' Primitive Camping off Rt. 28
+            td
+              a href='https://goo.gl/maps/yb97zNMKjQ32' target='_blank' 11m
+            td Free
+            td
+              p 4-5 sites. Small pond access.
+          tr
+            td
+              a href='http://www.dec.ny.gov/outdoor/24501.html' target='_blank' Woodland Valley Campground
+            td
+              a href='https://goo.gl/maps/Jy5U7oviZ6G2' target='_blank' 18m
+            td $20-25
+            td
+              p Our favorite. Drive-in campground with facilities.
+          tr
+            td
+              a href='http://www.dec.ny.gov/outdoor/24462.html' target='_blank'
+                | Devil's Tombstone Campground
+            td
+              a href='https://goo.gl/maps/vk6tw2X8h3P2' target='_blank' 18m
+            td $16-21
+            td
+              p Drive-in campground. No facilities.
 
-  section class='p-vertical-3 m-vertical-3'
+  section class='m-auto' style='max-width: 474px' class='p-vertical-3 m-vertical-3'
     div class='p-vertical-3 m-vertical-3'
-      a class='btn bg-blue-light@hover' href='travel' title='How to Get to the Catskills' How to Get to West Kill
+      a class='btn bg-blue-light@hover' href='activities' title='What to do in the Catskills' What to do

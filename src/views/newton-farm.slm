@@ -14,10 +14,12 @@
   h1 class='hidden' Natalya & Devon
   h2 class='m-bottom-2' Newton Farm
 
-  h3 class='ffs-dlig m-bottom-3' 228 Spruceton Rd, West Kill, NY 12492
+  h3 class='ffs-dlig m-bottom-3' <a href='https://goo.gl/maps/KjwXgiSVveo' target='_blank' class='regular-caps'>228 Spruceton Rd <br class='d-none@media-medium'><span class='d-none d-inline@media-medium'>•</span> West Kill, NY 12492</a>
   div class='ta-left m-bottom'
-    p Newton Farm is an historic 1860 farm which used to belong to (forget the details). Lynn Loflin has owned the farm since (?) when she came to live there with her husband Stu and son Ian.
-    p Lynn is an acclaimed New York City chef and restaurateur (more deets here). She now works at (more details here).
-    p She graciously agreed to host and cater our wedding and she has become our de facto wedding planner. It has been a pleasure to collaborate with her and we’re grateful for all of her good ideas and good sense.
+    p <a href='http://newtonfarmny.com/' target='_blank' title='Learn more about Newton Farm'>Newton Farm</a> is an historic 1860 farm owned by chef and restaurateur <a href='http://www.nycfoodpolicy.org/14518-2/' target='_blank' title='Learn more about Lynn Loflin'>Lynn Loflin</a> and her husband Stu and son Ian.
+    p Lynn graciously agreed to host and cater our wedding. It has been a pleasure to collaborate with her and we’re grateful for all of her good ideas and good sense.
 
 = content('body')
+  section class='p-vertical-3 m-vertical-3'
+    div class='p-vertical-3 m-vertical-3'
+      a class='btn bg-red-light@hover' href='travel' title='How to Get to the Catskills' How to Get There

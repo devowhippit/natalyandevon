@@ -1,0 +1,21 @@
+/ Layout
+= extend('layouts/rsvp')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+= partial('partials/rsvp.mixin.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Thank You • Natalya and Devon')
+
+= content('content')
+  header class='ta-center d-flex ai-center jc-center mh-100vh w-100p'
+    div
+      h1 class='hidden' Natalya & Devon
+      h2 class='h3'
+        | Thank you! Sorry you can't make it.
+
+  / main class='wrap m-auto p-bottom-3 m-bottom-3' style='max-width: 474px'

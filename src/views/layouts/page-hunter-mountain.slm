@@ -9,10 +9,10 @@ html lang='en'
 body style='visibility: hidden;' onload='load()' class='bg-green-light'
 
   header class='filter filter-multiply filter-green-light'
-    div class='mh-125vh bs-cover filter filter-blue-dark filter-screen filter-fade' style='background-image: url(images/img-hunter-mountain.png); background-position: 50% 0%;'
+    div class='bs-cover filter filter-blue-dark filter-screen filter-fade' style='background-image: url(images/img-hunter-mountain.png); background-position: 50% 0%; min-height: 1000px'
 
-      div class='wrap ta-center d-flex ai-center mh-66vh'
-        div class='m-auto' style='max-width: 474px'
+      div class='wrap ta-center d-flex ai-center@media-medium mh-66vh'
+        div class='m-auto p-3 bs-border-box' style='max-width: 474px'
           = content('title')
 
   main class='bg-blue-dark f-smooth'

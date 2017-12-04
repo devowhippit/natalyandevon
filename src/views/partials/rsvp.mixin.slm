@@ -4,77 +4,109 @@
 
     div data-js="rsvp"
 
-
       fieldset class='m-bottom-3'
 
-        h3 class='m-bottom-3' Your...
+        h3 class='m-bottom-3' Your response
 
-        div class='d-flex m-bottom'
-
-          div class='f-1 p-right'
-            label for='firstName' class='hidden' First Name
-            div class='c-textfield b-bottom'
-              input type='text' value='' name='First Name' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests'
-
-          div class='f-1 p-left'
-            label for='lastName' class='hidden' Last Name
-            div class='c-textfield b-bottom'
-              input type='text' value='' name='Last Name' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests'
-
-        label for='email' class='hidden' Email Address
-        div class='c-textfield b-bottom'
-          input type='email' value='' name='_replyto' class='w-100p' id='email' placeholder='Email Address' required='true'
-
-
-      fieldset class='m-bottom-3'
-
-        h3 class='m-bottom-3' Are you...
-
-        label class='btn c-checkbox bg-blue-dark@hover m-bottom m-horizontal' for='vegetarian'
-          input id='vegetarian' name='Vegetarian' type='checkbox' value='Yes'
+        label class='d-block c-checkbox m-bottom' for='attending-yes'
+          input id='attending-yes' name='Attending' type='radio' value='Yes' v-model='response'
           span class='c-checkbox__input'
             svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
               path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-          span class='c-checkbox__label' Vegetarian?
+          span class='c-checkbox__label'
+            | Yes I'm coming
           span class='c-checkbox__bg'
 
-        label class='btn c-checkbox bg-blue-dark@hover m-bottom mhorizontal' for='glutenFree'
-          input id='glutenFree' name='Gluten Free' type='checkbox' value='Yes'
+        label class='d-block c-checkbox m-bottom' for='attending-no'
+          input id='attending-no' name='Attending' type='radio' value='No' v-model='response'
           span class='c-checkbox__input'
             svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
               path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-          span class='c-checkbox__label' Or Gluten free?
+          span class='c-checkbox__label'
+            | No, I can't make it
           span class='c-checkbox__bg'
 
+      div v-if='response != "No"'
 
-      fieldset class='m-bottom-3'
+        fieldset class='m-bottom-3'
 
-        h3 class='m-bottom-3' Do you plan to...
+          h3 class='m-bottom-3' Name and email
 
-        div class='m-bottom'
-          label class='btn c-checkbox bg-blue-dark@hover' for='catskillsSeasonsInn'
-            input id='catskillsSeasonsInn' name='Catskills Seasons Inn' type='checkbox' value='Yes'
+          div class='d-flex fd-column fd-row@media-medium m-bottom'
+
+            div class='f-1 p-right@media-medium'
+              label for='firstName' class='hidden' First Name
+              div class='c-textfield b-bottom'
+                input class='bg-blue-light' type='text' value='' name='First Name' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests'
+
+            div class='f-1 p-left@media-medium'
+              label for='lastName' class='hidden' Last Name
+              div class='c-textfield b-bottom'
+                input class='bg-blue-light' type='text' value='' name='Last Name' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests'
+
+          label for='email' class='hidden' Email Address
+          div class='c-textfield b-bottom'
+            input class='bg-blue-light' type='email' value='' name='_replyto' class='w-100p' id='email' placeholder='Email Address' required='true'
+
+
+        fieldset class='m-bottom-3'
+
+          h3 class='m-bottom-3' Dietary restrictions
+
+          label class='d-block c-checkbox m-bottom' for='vegetarian'
+            input id='vegetarian' name='Vegetarian' type='checkbox' value='Yes'
             span class='c-checkbox__input'
               svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
                 path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-            span class='c-checkbox__label' Stay at the Catskills Seasons Inn?
+            span class='c-checkbox__label' Vegetarian
             span class='c-checkbox__bg'
 
-        div class='m-bottom'
-          label class='btn c-checkbox bg-blue-dark@hover' for='camping'
-            input id='camping' name='Camping' type='checkbox' value='Yes'
+          label class='d-block c-checkbox m-bottom' for='glutenFree'
+            input id='glutenFree' name='Gluten Free' type='checkbox' value='Yes'
             span class='c-checkbox__input'
               svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
                 path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-            span class='c-checkbox__label' Or camp on the farm?
+            span class='c-checkbox__label' Gluten free
             span class='c-checkbox__bg'
 
 
-      fieldset class='m-bottom-3' v-if='guest.guests != false'
+        fieldset class='m-bottom-3'
+
+          h3 class='m-bottom-3' Lodging plans
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='lodging-catskillsSeasonsInn'
+              input id='lodging-catskillsSeasonsInn' name='Lodging' type='radio' value='Catskills Seasons Inn'
+              span class='c-checkbox__input'
+                svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                  path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+              span class='c-checkbox__label' Catskills Seasons Inn
+              span class='c-checkbox__bg'
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='lodging'
+              input id='lodging' name='Lodging' type='radio' value='Camping'
+              span class='c-checkbox__input'
+                svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                  path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+              span class='c-checkbox__label' Camping on the farm
+              span class='c-checkbox__bg'
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='lodging-other'
+              input id='lodging-other' name='Lodging' type='radio' value='Other'
+              span class='c-checkbox__input'
+                svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                  path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+              span class='c-checkbox__label' Other
+              span class='c-checkbox__bg'
+
+
+        fieldset class='m-bottom-3' v-if='guest.guests != false'
 
         h3 class='m-bottom-3' Which guests will be attending with you?
 
-        label class='btn c-checkbox bg-blue-dark@hover m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
+        label class='d-block c-checkbox m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
           input v-bind:id='g.firstName + g.lastName' v-bind:name='g.firstName + " " + g.lastName' type='checkbox' value='Yes'
           span class='c-checkbox__input'
             svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
@@ -89,9 +121,9 @@
         input type='hidden' name='_cc' value='devon@natalyandevon.com'
 
       div class='ta-center m-bottom-3'
-        button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Finish and Send RSVP
+        button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Submit RSVP
 
-    p class='ta-center p-horizontal' == "If there's any issue with the form above email us directly; rsvp@natalyandevon.com"
+    p class='ta-center p-horizontal' == "If there's any issue with the form above email us directly: rsvp@natalyandevon.com."
 
   = content('script')
     javascript:
