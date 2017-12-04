@@ -26,35 +26,34 @@
             | No, I can't make it
           span class='c-checkbox__bg'
 
+      fieldset class='m-bottom-3'
+
+        h3 class='m-bottom-3' Name and email
+
+        div class='d-flex fd-column fd-row@media-medium m-bottom'
+
+          div class='f-1 p-right@media-medium'
+            label for='firstName' class='hidden' First Name
+            div class='c-textfield b-bottom'
+              input class='bg-blue-light' type='text' value='' name='Name First' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests'
+
+          div class='f-1 p-left@media-medium'
+            label for='lastName' class='hidden' Last Name
+            div class='c-textfield b-bottom'
+              input class='bg-blue-light' type='text' value='' name='Name Last' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests'
+
+        label for='email' class='hidden' Email Address
+        div class='c-textfield b-bottom'
+          input class='bg-blue-light' type='email' value='' name='_replyto' class='w-100p' id='email' placeholder='Email Address' required='true'
+
       div v-if='response != "No"'
-
-        fieldset class='m-bottom-3'
-
-          h3 class='m-bottom-3' Name and email
-
-          div class='d-flex fd-column fd-row@media-medium m-bottom'
-
-            div class='f-1 p-right@media-medium'
-              label for='firstName' class='hidden' First Name
-              div class='c-textfield b-bottom'
-                input class='bg-blue-light' type='text' value='' name='First Name' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests'
-
-            div class='f-1 p-left@media-medium'
-              label for='lastName' class='hidden' Last Name
-              div class='c-textfield b-bottom'
-                input class='bg-blue-light' type='text' value='' name='Last Name' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests'
-
-          label for='email' class='hidden' Email Address
-          div class='c-textfield b-bottom'
-            input class='bg-blue-light' type='email' value='' name='_replyto' class='w-100p' id='email' placeholder='Email Address' required='true'
-
 
         fieldset class='m-bottom-3'
 
           h3 class='m-bottom-3' Dietary restrictions
 
           label class='d-block c-checkbox m-bottom' for='vegetarian'
-            input id='vegetarian' name='Vegetarian' type='checkbox' value='Yes'
+            input id='vegetarian' name='Diet Vegetarian' type='checkbox' value='Yes'
             span class='c-checkbox__input'
               svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
                 path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
@@ -62,7 +61,7 @@
             span class='c-checkbox__bg'
 
           label class='d-block c-checkbox m-bottom' for='glutenFree'
-            input id='glutenFree' name='Gluten Free' type='checkbox' value='Yes'
+            input id='glutenFree' name='Diet Gluten Free' type='checkbox' value='Yes'
             span class='c-checkbox__input'
               svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
                 path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
@@ -104,21 +103,22 @@
 
         fieldset class='m-bottom-3' v-if='guest.guests != false'
 
-        h3 class='m-bottom-3' Which guests will be attending with you?
+          h3 class='m-bottom-3' Which guests will be attending with you?
 
-        label class='d-block c-checkbox m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
-          input v-bind:id='g.firstName + g.lastName' v-bind:name='g.firstName + " " + g.lastName' type='checkbox' value='Yes'
-          span class='c-checkbox__input'
-            svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-              path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-          span class='c-checkbox__label' {{ g.firstName }} {{ g.lastName }}
-          span class='c-checkbox__bg'
+          label class='d-block c-checkbox m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
+            input v-bind:id='g.firstName + g.lastName' v-bind:name='"+ " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
+            span class='c-checkbox__input'
+              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            span class='c-checkbox__label' {{ g.firstName }} {{ g.lastName }}
+            span class='c-checkbox__bg'
 
       div style='position: fixed; left: -100%;' aria-hidden='true'
         input type='text' name='_gotcha'
-        input type='hidden' name='_next' value='/confirm'
         input type='hidden' name='_subject' value='New RSVP'
         input type='hidden' name='_cc' value='devon@natalyandevon.com'
+        input type='hidden' name="_next" value="thank-you-sorry" v-if='response === "No"'
+        input type='hidden' name="_next" value="looking-forward-to-seeing-you" v-if='response === "Yes"'
 
       div class='ta-center m-bottom-3'
         button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Submit RSVP
