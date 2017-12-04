@@ -6,11 +6,13 @@
 
     link rel='stylesheet' href='styles/site.min.css'
 
-    title= this.title
+    title = this.title
 
     noscript
       style
         = 'body { visibility: visible !important; }'
+
+    script src='scripts/modernizr.js'
 
     javascript:
       function load() { document.body.style.visibility = 'visible' };

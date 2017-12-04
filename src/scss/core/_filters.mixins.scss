@@ -10,8 +10,12 @@
 
   @each $mode in $mix-blend-modes {
 
-    .filter-#{$mode}::before {
+    .backgroundblendmode .filter-#{$mode}::before {
       mix-blend-mode: $mode;
+    }
+
+    .no-backgroundblendmode .filter-#{$mode}::before {
+      opacity: 0.25;
     }
 
   }

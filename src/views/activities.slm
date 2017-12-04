@@ -20,12 +20,12 @@
       p There are hiking trails with sweeping vistas, rivers for fishing and tubing, and delicious farm-to-table restaurants – all surrounded by some of the most breathtaking scenery on the East Coast.
 
   nav class='p-bottom-3 m-bottom-3'
-    a href='#hiking' class='m-horizontal' Hiking
-    a href='#adventure' class='m-horizontal' Adventure
-    a href='#fishing' class='m-horizontal' Fishing
-    a href='#dining' class='m-horizontal' Dining
-    a href='#relaxation' class='m-horizontal' Relaxation
-    a href='#towns' class='m-horizontal' Towns
+    a href='#hiking' class='d-inline-flex m-horizontal' Hiking
+    a href='#adventure' class='d-inline-flex m-horizontal' Adventure
+    a href='#fishing' class='d-inline-flex m-horizontal' Fishing
+    a href='#dining' class='d-inline-flex m-horizontal' Dining
+    a href='#relaxation' class='d-inline-flex m-horizontal' Relaxation
+    a href='#towns' class='d-inline-flex m-horizontal' Towns
 
 = content('body')
   section#hiking  class='m-auto' style='max-width: 474px'

@@ -54,7 +54,8 @@
       stroke: $color !important;
     }
 
-    .filter-#{$namespace}::before {
+    .backgroundblendmode .filter-#{$namespace}::before,
+    .no-backgroundblendmode .filter-fallback-#{$namespace}::before {
       background: $color
     }
 

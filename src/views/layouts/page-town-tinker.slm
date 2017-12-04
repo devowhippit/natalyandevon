@@ -8,7 +8,7 @@ html lang='en'
 
 body style='visibility: hidden;' onload='load()' class='bg-base-white'
 
-  header class='filter filter-multiply filter-base-white'
+  header class='filter filter-multiply filter-base-white filter-fallback-red-mid'
     div class='mh-125vh bs-cover filter filter-red-dark filter-screen filter-fade' style='background-image: url(images/img-town-tinker.png); background-position: 50% 0%; min-height: 1150px'
 
       div class='wrap ta-center d-flex ai-center@media-medium mh-66vh'

@@ -15,7 +15,7 @@
 
     div class='mh-66vh d-flex@media-large jc-end ai-stretch fd-row-reverse bg-base-white'
 
-      div class='f-1 h-66vh h-66vh d-flex fd-column filter filter-multiply filter-blue-light animated fadeIn ad-4s'
+      div class='f-1 h-66vh h-66vh d-flex fd-column filter filter-multiply filter-blue-light filter-fallback-blue-dark animated fadeIn ad-1s'
         div class='wh-100p bs-cover filter filter-blue-dark filter-screen' style='background-image: url(images/img-engagement-3.png); background-position: 61% 40%;'
 
       div class='f-1 mh-66vh'
@@ -37,26 +37,26 @@
     div class='d-flex@media-medium jc-end ai-stretch fd-column fd-row@media-medium bg-base-white'
 
       div class='f-1 h-33vh'
-        div class='wh-100p filter filter-multiply filter-blue-light b-base-white bs-border-box b-solid bw-16 brw-0@media-medium'
-          div class='wh-100p bs-cover filter filter-red-dark filter-screen' style='background-image: url(images/img-newton-farm.png); background-position: 50% 0%;'
-            a href='newton-farm' class='wh-100p d-flex ai-center jc-center'
-              span class='p-bottom-3 m-bottom-3' Newton Farm
+        div class='wh-100p filter filter-multiply filter-blue-light filter-fallback-red-mid b-base-white bs-border-box b-solid bw-16 brw-0@media-medium'
+          div class='wh-100p bs-cover filter filter-red-dark filter-screen' style='background-image: url(images/img-newton-farm.png); background-position: 50% 50%;'
+            a href='newton-farm' class='wh-100p d-flex jc-center'
+              span class='p-top-3 m-top-3' Newton Farm
 
       div class='f-1 h-33vh'
-        div class='wh-100p filter filter-multiply filter-blue-light b-base-white bs-border-box b-solid bw-16 btw-0 btw-16@media-medium'
+        div class='wh-100p filter filter-multiply filter-blue-light filter-fallback-green-dark b-base-white bs-border-box b-solid bw-16 btw-0 btw-16@media-medium'
           div class='wh-100p bs-cover filter filter-green-dark filter-screen' style='background-image: url(images/img-north-south-lake.png); background-position: 48% 64%;'
-            a href='travel' class='wh-100p d-flex ai-center jc-center'
-              span class='p-bottom-3 m-bottom-3' Travel
+            a href='travel' class='wh-100p d-flex jc-center'
+              span class='p-top-3 m-top-3' Travel
 
       div class='f-1 h-33vh'
-        div class='wh-100p filter filter-multiply filter-blue-light b-base-white bs-border-box b-solid bw-16 btw-0 btw-16@media-medium blw-0@media-medium'
-          div class='wh-100p bs-cover filter filter-blue-dark filter-screen' style='background-image: url(images/img-hunter-mountain.png); background-position: 48% 20%;'
-            a href='lodging' class='wh-100p d-flex ai-center jc-center'
-              span class='p-bottom-3 m-bottom-3' Lodging
+        div class='wh-100p filter filter-multiply filter-blue-light filter-fallback-blue-dark b-base-white bs-border-box b-solid bw-16 btw-0 btw-16@media-medium blw-0@media-medium'
+          div class='wh-100p bs-cover filter filter-blue-dark filter-screen' style='background-image: url(images/img-hunter-mountain.png); background-position: 48% 40%;'
+            a href='lodging' class='wh-100p d-flex jc-center'
+              span class='p-top-3 m-top-3' Lodging
 
       div class='f-1 h-33vh'
-        div class='wh-100p filter filter-multiply filter-blue-light b-base-white bs-border-box b-solid bw-16 btw-0 btw-16@media-medium blw-0@media-medium'
+        div class='wh-100p filter filter-multiply filter-blue-light filter-fallback-red-mid b-base-white bs-border-box b-solid bw-16 btw-0 btw-16@media-medium blw-0@media-medium'
           div class='wh-100p bs-cover filter filter-red-dark filter-screen' style='background-image: url(images/img-town-tinker.png); background-position: 50% 0%;'
-            a href='activities' class='wh-100p d-flex ai-center jc-center'
-              span class='p-bottom-3 m-bottom-3' Activities
+            a href='activities' class='wh-100p d-flex jc-center'
+              span class='p-top-3 m-top-3' Activities
 
