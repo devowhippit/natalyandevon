@@ -1,6 +1,5 @@
 'use strict';
 
-import module from './modules/module';
 import rsvp from './modules/rsvp';
 import Vue from 'vue';
 /** import modules here as they are written */

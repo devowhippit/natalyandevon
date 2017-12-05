@@ -18,9 +18,9 @@
   div class='ta-left m-bottom'
     p There are regular Trailways buses to and from New York City, but we recommend renting a car or carpooling if you want to explore the area. Try <a href='https://www.autoslash.com' target='_blank'>AutoSlash</a> for discounts. If you can, we encourage you to take a long weekend to enjoy the spectacular hiking and charming local breweries and restaurants.
 
-  nav
-    a href='#nyc' class='m-horizontal' From NYC
-    a href='#albany' class='m-horizontal' From Albany
+  nav class='c-nav-inline-block'
+    a href='#nyc' From NYC
+    a href='#albany' From Albany
 
 = content('body')
   section#nyc class='m-auto' style='max-width: 474px'

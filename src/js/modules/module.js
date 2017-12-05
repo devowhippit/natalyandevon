@@ -1,6 +1,6 @@
 'use strict';
 
-import _ from 'lodash';
+import _find from 'lodash-es/find';
 import CONSTANTS from './constants';
 
 class module {

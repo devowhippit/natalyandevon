@@ -1,4 +1,5 @@
 = partial('../partials/footer.mixin.slm')
+= partial('../partials/nav.mixin.slm')
 
 doctype html
 html lang='en'

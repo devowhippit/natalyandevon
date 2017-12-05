@@ -9,5 +9,8 @@ body style='visibility: hidden;' onload='load()' class='bg-blue-light'
 
   = content('content')
 
+  footer
+    = mixin('nav')
+
   script src='scripts/main.dist.js'
   = content('script')

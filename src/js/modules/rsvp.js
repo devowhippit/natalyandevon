@@ -2,7 +2,7 @@
 
 import _find from 'lodash-es/find';
 import Vue from 'vue/dist/vue.esm';
-import Validator from 'vee-validate';
+import GUESTLIST from './guestlist';
 
 class rsvp {
 
@@ -11,6 +11,8 @@ class rsvp {
     this._data = data;
 
     this._settings = settings;
+
+    console.dir(GUESTLIST);
 
     this._vue = {
       el: '[data-js="rsvp"]',
@@ -22,26 +24,7 @@ class rsvp {
           lastName: '',
           guests: false
         },
-        guestList: [
-          {
-            firstName: 'Devon',
-            lastName: 'Hirth',
-            guests: [
-              {
-                firstName: 'Natalya',
-                lastName: 'Krimgold'
-              },
-              {
-                firstName: 'Colin',
-                lastName: 'Hirth'
-              },
-              {
-                firstName: 'Barclay',
-                lastName: 'Hirth'
-              }
-            ]
-          }
-        ]
+        guestList: GUESTLIST
       }
     }
 
@@ -49,10 +32,11 @@ class rsvp {
 
   init() {
 
-    Vue.use(Validator, {events: 'blur'});
+    Vue.use(VeeValidate, {events: 'blur'});
 
     this._vue.methods = {
-      findGuests: this._findGuests
+      findGuests: this._findGuests//,
+      // validate: this._validate
     };
 
     this._vue = new Vue(this._vue);
@@ -60,6 +44,18 @@ class rsvp {
     return this;
 
   }
+
+  // _validate(event) {
+  //   console.dir(event);
+  //   this.$validator.validateAll().then((result) => {
+  //     if (result) {
+  //       // eslint-disable-next-line
+  //       // alert('From Submitted!');
+  //       return;
+  //     }
+  //     // alert('Correct them errors!');
+  //   });
+  // }
 
   _findGuests() {
 

@@ -7,7 +7,7 @@
 
 // Declarations
 .c-nav-block {
-  display: inline-block;
+  display: inline-block
 }
 
 .c-nav-block > * {
@@ -16,7 +16,7 @@
 }
 
 .c-nav-inline-block {
-  display: inline-block;
+  display: inline-block
 }
 
 .c-nav-inline-block > * {
@@ -28,10 +28,15 @@
   margin: 0 $grid-base
 }
 
-.c-nav-inline-block > *:first-child {
-  margin-left: 0
+.c-nav-inline-flex {
+  display: inline-flex
 }
 
-.c-nav-inline-block > *:last-child {
-  margin-right: 0
+.c-nav-inline-flex > * {
+  display: inline-flex;
+  margin: inherit
+}
+
+.c-nav-inline-flex > * {
+  margin: 0 $grid-base
 }

@@ -3,7 +3,6 @@
  */
 
 // Dependencies
-// @import 'core/grid.vars';
 @import 'core/fonts.vars';
 
 // Declarations
@@ -12,17 +11,13 @@
   overflow: hidden;
   border-color: transparent;
   display: inline-block;
+  cursor: pointer
 }
-
-// .btn.c-checkbox {
-//   padding-top: 13px;
-//   padding-bottom: 13px;
-// }
 
 .c-checkbox input {
   position: absolute;
   right: 110%;
-  z-index: 1;
+  z-index: 1
 }
 
 .c-checkbox__label {
@@ -31,7 +26,7 @@
   display: inline-block;
   pointer-events: none;
   position: relative;
-  top: 1px;
+  top: 1px
 }
 
 .c-checkbox__bg {
@@ -39,12 +34,11 @@
   width: 100%;
   height: 100%;
   background-color: transparent;
-  // border: 1px solid;
   box-sizing: border-box;
   border-radius: inherit;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 0
 }
 
 // .c-checkbox:hover .c-checkbox__bg,

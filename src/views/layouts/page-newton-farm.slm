@@ -18,6 +18,9 @@ body style='visibility: hidden;' onload='load()' class='bg-blue-light'
     div class='wrap ta-center'
       = content('body')
 
+  footer class='bg-red-dark f-smooth'
+    = mixin('nav')
+
   script src='scripts/main.dist.js'
 
   = content('script')

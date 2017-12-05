@@ -8,8 +8,10 @@
 
         h3 class='m-bottom-3' Your response
 
+        p class='c-red-mid' v-if='errors.has("Attending")' Please select an option;
+
         label class='d-block c-checkbox m-bottom' for='attending-yes'
-          input id='attending-yes' name='Attending' type='radio' value='Yes' required='true' v-model='response'
+          input id='attending-yes' name='Attending' type='radio' value='Yes' required='true' v-model='response' v-validate="{required: true}"
           span class='c-checkbox__input'
             svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
               path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
@@ -18,7 +20,7 @@
           span class='c-checkbox__bg'
 
         label class='d-block c-checkbox m-bottom' for='attending-no'
-          input id='attending-no' name='Attending' type='radio' value='No' required='true' v-model='response'
+          input id='attending-no' name='Attending' type='radio' value='No' required='true' v-model='response' v-validate="{required: true}"
           span class='c-checkbox__input'
             svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
               path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
@@ -30,21 +32,26 @@
 
         h3 class='m-bottom-3' Name and email
 
-        div class='d-flex fd-column fd-row@media-medium m-bottom'
+        p class='c-red-mid m-top-3 m-bottom' v-if='errors.has("Name First")' Please add your first name;
+        p class='c-red-mid' v-if='errors.has("Name Last")' Please add your last name;
+
+        div class='d-flex fd-column fd-row@media-medium'
 
           div class='f-1 p-right@media-medium'
             label for='firstName' class='hidden' First Name
             div class='c-textfield b-bottom'
-              input class='bg-blue-light' type='text' value='' name='Name First' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests'
+              input class='bg-blue-light' type='text' value='' name='Name First' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests' v-validate='{required: true}'
 
           div class='f-1 p-left@media-medium'
             label for='lastName' class='hidden' Last Name
             div class='c-textfield b-bottom'
-              input class='bg-blue-light' type='text' value='' name='Name Last' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests'
+              input class='bg-blue-light' type='text' value='' name='Name Last' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests' v-validate='{required: true}'
 
-        label for='email' class='hidden' Email Address
-        div class='c-textfield b-bottom'
-          input class='bg-blue-light' type='email' value='' name='_replyto' class='w-100p' id='email' placeholder='Email Address' required='true'
+        div
+          p class='c-red-mid m-top-3 m-bottom' v-if='errors.has("_replyto")' Please enter a valid email;
+          label for='email' class='hidden' Email Address
+          div class='c-textfield b-bottom'
+            input class='bg-blue-light' type='email' value='' name='_replyto' class='w-100p' id='email' placeholder='Email Address' required='true' v-validate='{required: true, email}'
 
       div v-if='response != "No"'
 
@@ -120,12 +127,13 @@
         input type='hidden' name="_next" value="thank-you-sorry" v-if='response === "No"'
         input type='hidden' name="_next" value="looking-forward-to-seeing-you" v-if='response === "Yes"'
 
-      div class='ta-center m-bottom-3'
+      div class='ta-center p-vertical-3 m-bottom-3'
         button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Submit RSVP
 
     p class='ta-center p-horizontal' == "If there's any issue with the form above email us directly: rsvp@natalyandevon.com."
 
   = content('script')
+    script src='https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js'
     javascript:
       var main = new main();
       var rsvp = main.rsvp;

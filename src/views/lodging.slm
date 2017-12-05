@@ -18,10 +18,10 @@
   div class='ta-left m-bottom'
     p The most affordable options are AirBnbs for groups and rooms at the Catskills Season’s Inn for singles and couples (discount code NATALYADEVON0616). Other charming choices abound – just take a look below.
 
-  nav
-    a href='#inns' class='m-horizontal' Inns
-    a href='#airbnbs' class='m-horizontal' AirBnbs
-    a href='#camping' class='m-horizontal' Camping
+  nav class='c-nav-inline-block'
+    a href='#inns' Inns
+    a href='#airbnbs' AirBnbs
+    a href='#camping' Camping
 
 = content('body')
   section#inns class='m-auto' style='max-width: 474px'
