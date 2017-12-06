@@ -8,7 +8,7 @@
     "vars": "src/vars.json"
   },
   "name": "natalyandevon.com",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "natalyandevon.com",
   "main": "serve.js",
   "scripts": {

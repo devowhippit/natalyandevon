@@ -55,9 +55,21 @@
 
       div v-if='response != "No"'
 
+        fieldset class='m-bottom-3' v-if='guest.guests != false'
+
+          h3 class='m-bottom-3' Which guests will be attending with you?
+
+          label class='d-block c-checkbox m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
+            input v-bind:id='g.firstName + g.lastName' v-bind:name='"+ " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
+            span class='c-checkbox__input'
+              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            span class='c-checkbox__label' {{ g.firstName }} {{ g.lastName }}
+            span class='c-checkbox__bg'
+
         fieldset class='m-bottom-3'
 
-          h3 class='m-bottom-3' Dietary restrictions
+          h3 class='m-bottom-3' Your Dietary restrictions
 
           label class='d-block c-checkbox m-bottom' for='vegetarian'
             input id='vegetarian' name='Diet Vegetarian' type='checkbox' value='Yes'
@@ -75,6 +87,25 @@
             span class='c-checkbox__label' Gluten free
             span class='c-checkbox__bg'
 
+        fieldset class='m-bottom-3' v-for='g in guest.guests'
+
+          h3 class='m-bottom-3' Dietary restrictions for {{ g.firstName }}
+
+          label class='d-block c-checkbox m-bottom' v-bind:for='"vegetarian"+ g.firstName + g.lastName'
+            input v-bind:id='"vegetarian"+ g.firstName + g.lastName' v-bind:name='"Diet Vegetarian " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
+            span class='c-checkbox__input'
+              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            span class='c-checkbox__label' Vegetarian
+            span class='c-checkbox__bg'
+
+          label class='d-block c-checkbox m-bottom' v-bind:for='"glutenFree"+ g.firstName + g.lastName'
+            input v-bind:id='"glutenFree"+ g.firstName + g.lastName' v-bind:name='"Diet Gluten Free " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
+            span class='c-checkbox__input'
+              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            span class='c-checkbox__label' Gluten free
+            span class='c-checkbox__bg'
 
         fieldset class='m-bottom-3'
 
@@ -108,17 +139,7 @@
               span class='c-checkbox__bg'
 
 
-        fieldset class='m-bottom-3' v-if='guest.guests != false'
 
-          h3 class='m-bottom-3' Which guests will be attending with you?
-
-          label class='d-block c-checkbox m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
-            input v-bind:id='g.firstName + g.lastName' v-bind:name='"+ " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
-            span class='c-checkbox__input'
-              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-            span class='c-checkbox__label' {{ g.firstName }} {{ g.lastName }}
-            span class='c-checkbox__bg'
 
       div style='position: fixed; left: -100%;' aria-hidden='true'
         input type='text' name='_gotcha'
