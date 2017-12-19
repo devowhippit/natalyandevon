@@ -4,7 +4,7 @@
 
     div data-js="rsvp"
 
-      fieldset class='m-bottom-3'
+      fieldset class='m-bottom-3 animated fadeInUp ad-1s'
 
         h3 class='m-bottom-3' Your response
 
@@ -28,7 +28,7 @@
             | No, I can't make it
           span class='c-checkbox__bg'
 
-      fieldset class='m-bottom-3'
+      fieldset class='m-bottom-3 animated fadeInUp ad-1_25s'
 
         h3 class='m-bottom-3' Name and email
 
@@ -55,7 +55,7 @@
 
       div v-if='response != "No"'
 
-        fieldset class='m-bottom-3' v-if='guest.guests != false'
+        fieldset class='m-bottom-3 animated fadeInUp' v-if='guest.guests != false'
 
           h3 class='m-bottom-3' Which guests will be attending with you?
 
@@ -67,7 +67,7 @@
             span class='c-checkbox__label' {{ g.firstName }} {{ g.lastName }}
             span class='c-checkbox__bg'
 
-        fieldset class='m-bottom-3'
+        fieldset class='m-bottom-3 animated fadeInUp ad-1_5s'
 
           h3 class='m-bottom-3' Your Dietary restrictions
 
@@ -87,7 +87,7 @@
             span class='c-checkbox__label' Gluten free
             span class='c-checkbox__bg'
 
-        fieldset class='m-bottom-3' v-for='g in guest.guests'
+        fieldset class='m-bottom-3 animated fadeInUp ad-1_75s' v-for='g in guest.guests'
 
           h3 class='m-bottom-3' Dietary restrictions for {{ g.firstName }}
 
@@ -107,7 +107,7 @@
             span class='c-checkbox__label' Gluten free
             span class='c-checkbox__bg'
 
-        fieldset class='m-bottom-3'
+        fieldset class='m-bottom-3 animated fadeInUp ad-2s'
 
           h3 class='m-bottom-3' Lodging plans
 
@@ -148,7 +148,7 @@
         input type='hidden' name="_next" value="thank-you-sorry" v-if='response === "No"'
         input type='hidden' name="_next" value="looking-forward-to-seeing-you" v-if='response === "Yes"'
 
-      div class='ta-center p-vertical-3 m-bottom-3'
+      div class='ta-center p-vertical-3 m-bottom-3 animated fadeInUp ad-2_25s'
         button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Submit RSVP
 
     p class='ta-center p-horizontal' == "If there's any issue with the form above email us directly: rsvp@natalyandevon.com."

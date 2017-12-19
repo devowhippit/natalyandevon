@@ -8,10 +8,10 @@ html lang='en'
 
 body style='visibility: hidden;' onload='load()' class='bg-base-white'
 
-  header class='filter filter-multiply filter-base-white filter-fallback-red-mid'
+  header class='filter filter-multiply filter-base-white filter-fallback-red-mid animated fadeIn ad-1s'
     div class='mh-125vh bs-cover filter filter-red-dark filter-screen filter-fade' style='background-image: url(images/img-town-tinker.png); background-position: 50% 0%; min-height: 1150px'
 
-      div class='wrap ta-center d-flex ai-center@media-medium mh-66vh'
+      div class='wrap ta-center d-flex ai-center@media-medium mh-66vh animated fadeInUp ad-1_75s'
         div class='w-100p bs-border-box p-3 m-bottom-3'
           = content('title')
 

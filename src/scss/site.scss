@@ -15,9 +15,10 @@
 // Any external dependency can be included here. It may also make sense to include
 // it within your component and object styles if it is a dependency of that component
 // or object. Be sure to add 'node_modules' to your include paths if you are using
-// that to manage dependencies (recommended). Dependency examples include Bootstrap
+// npm to manage dependencies (recommended). Dependency examples include Bootstrap
 // or Material Components Web.
 @import 'animate.scss/vendor/assets/stylesheets/animate/fadeIn';
+@import 'animate.scss/vendor/assets/stylesheets/animate/fadeInUp';
 
 /*************************
  * Components
