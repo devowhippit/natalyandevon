@@ -14,10 +14,10 @@
   "scripts": {
     "test": "",
     "start": "PORT=$npm_package_config_port VARS=$npm_package_config_vars concurrently 'npm run styles-watch' 'npm run scripts-watch' 'npm run build-watch' 'npm run serve' 'npm run sync'",
-    "serve": "node serve.js --ext slm --watch src",
+    "serve": "PORT=$npm_package_config_port VARS=$npm_package_config_vars node serve.js --ext slm --watch src",
     "sync": "browser-sync start --files 'src' --no-open --no-ui --reload-delay 2000 --proxy \"http://localhost:$npm_package_config_port\"",
-    "build": "node build.js",
-    "publish": "node publish.js",
+    "build": "PORT=$npm_package_config_port VARS=$npm_package_config_vars node build.js",
+    "publish": "PORT=$npm_package_config_port VARS=$npm_package_config_vars node publish.js",
     "build-watch": "nodemon --ext slm --watch src/views -x 'npm run build'",
     "styles-vars": "json-sass -i $npm_package_config_vars -o src/scss/core/_vars.scss -p '$vars:'",
     "styles-watch": "nodemon --ext scss --watch src/scss --ignore _vars.scss -x 'npm run styles'",

@@ -107,7 +107,12 @@
       div class='p-vertical-3 m-vertical-3'
         h1 class='h2 m-bottom-3' Fishing
 
+        p Welcome to the birthplace of american fly fishing!
+
         p We haven’t done any fishing ourselves, but from what we gather the Esopus and Schoharie Creeks, the East and West Branch Delaware Rivers are the places to go.
+
+        p
+          a href='http://www.visitthecatskills.com/fishing' target='_blank' More information on can be found at visitthecatskills.com
 
   section#dining class='m-auto' style='max-width: 474px'
     div class='b-top m-auto' style='max-width: 200px'
@@ -154,6 +159,11 @@
               a href='https://zmm.mro.org/' target='_blank' Zen Mountain Monastery
             td
               p We haven’t been here, but it sounds awesome. They have a weekly Sunday morning program where you can practice the art of meditation and hear a talk about it. Might be nice after the reception.
+          tr
+            td
+              a href='https://www.mtarboretum.org/' target='_blank' Mountain Top Arboretum
+            td
+              p A public garden in the Catskill Mountains dedicated to displaying and managing native plant communities of the northeastern US. Its mountain top elevation of 2,400 feet at the top of the New York City Watershed creates a unique environment with 178 acres of plant collections, natural meadows, wetlands, forest and Devonian bedrock.
 
   section#towns class='m-auto' style='max-width: 474px'
     div class='b-top m-auto' style='max-width: 200px'
