@@ -1,8 +1,11 @@
 'use strict';
 
 import _find from 'lodash-es/find';
+import _map from 'lodash-es/map';
+import _uniq from 'lodash-es/uniq';
 import Vue from 'vue/dist/vue.esm';
 import GUESTLIST from './guestlist';
+import MissPlete from './MissPlete.js';
 
 class rsvp {
 
@@ -11,8 +14,6 @@ class rsvp {
     this._data = data;
 
     this._settings = settings;
-
-    console.dir(GUESTLIST);
 
     this._vue = {
       el: '[data-js="rsvp"]',
@@ -35,8 +36,9 @@ class rsvp {
     Vue.use(VeeValidate, {events: 'blur'});
 
     this._vue.methods = {
-      findGuests: this._findGuests//,
-      // validate: this._validate
+      findName: this._findName,
+      findGuests: this._findGuests,
+      validate: this._validate
     };
 
     this._vue = new Vue(this._vue);
@@ -45,17 +47,31 @@ class rsvp {
 
   }
 
-  // _validate(event) {
-  //   console.dir(event);
-  //   this.$validator.validateAll().then((result) => {
-  //     if (result) {
-  //       // eslint-disable-next-line
-  //       // alert('From Submitted!');
-  //       return;
-  //     }
-  //     // alert('Correct them errors!');
-  //   });
-  // }
+  _validate(event) {
+
+    this.$validator.validateAll().then((result) => {
+
+      if (result) return result;
+
+      return event.preventDefault();
+
+    });
+
+  }
+
+  _findName(event, key) {
+
+    if (!event.currentTarget._missplete) {
+      event.currentTarget._missplete = new MissPlete({
+        input: event.currentTarget,
+        options: _map( _uniq(
+          _map( this.guestList, (i) => i[key] )
+        ), (i) => [i]),
+        className: 'c-missplete'
+      });
+    }
+
+  }
 
   _findGuests() {
 

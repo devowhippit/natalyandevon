@@ -1,34 +1,34 @@
+= partial('c-checkbox__input.slm')
+
 = mixin('rsvp')
+  p class='ta-center p-horizontal'
+    | If there's any issue with the form below email us directly: rsvp@natalyandevon.com.
 
-  form action='https://formspree.io/rsvp@natalyandevon.com' method='post' target='_blank' name='rsvp' class='w-100p'
+  div data-js="rsvp"
 
-    div data-js="rsvp"
+    form action='https://formspree.io/rsvp@natalyandevon.com' method='post' target='_blank' name='rsvp' class='w-100p'
 
       fieldset class='m-bottom-3 animated fadeInUp ad-1s'
 
         h3 class='m-bottom-3' Your response
 
-        p class='c-red-mid' v-if='errors.has("Attending")' Please select an option;
+        p class='c-red-mid' v-if='errors.has("Attending")' Please select a response;
 
         label class='d-block c-checkbox m-bottom' for='attending-yes'
-          input id='attending-yes' name='Attending' type='radio' value='Yes' required='true' v-model='response' v-validate="{required: true}"
-          span class='c-checkbox__input'
-            svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-              path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+          input id='attending-yes' name='Attending' type='radio' value='Yes' required='true' v-model='response' v-validate="'required|in:Yes,No'"
+          = mixin('c-checkbox__input')
           span class='c-checkbox__label'
-            | Yes I'm coming
+            | Yes, I'm coming
           span class='c-checkbox__bg'
 
         label class='d-block c-checkbox m-bottom' for='attending-no'
-          input id='attending-no' name='Attending' type='radio' value='No' required='true' v-model='response' v-validate="{required: true}"
-          span class='c-checkbox__input'
-            svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-              path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+          input id='attending-no' name='Attending' type='radio' value='No' required='true' v-model='response'
+          = mixin('c-checkbox__input')
           span class='c-checkbox__label'
             | No, I can't make it
           span class='c-checkbox__bg'
 
-      fieldset class='m-bottom-3 animated fadeInUp ad-1_25s'
+      fieldset class='m-bottom-3 animated fadeInUp ad-1_25s p-relative zi-1'
 
         h3 class='m-bottom-3' Name and email
 
@@ -40,12 +40,12 @@
           div class='f-1 p-right@media-medium'
             label for='firstName' class='hidden' First Name
             div class='c-textfield b-bottom'
-              input class='bg-blue-light' type='text' value='' name='Name First' class='w-100p' id='firstName' placeholder='First Name' required='true' v-model='guest.firstName' v-on:blur='findGuests' v-validate='{required: true}'
+              input class='bg-blue-light' type='text' value='' name='Name First' class='w-100p' id='firstName' placeholder='First Name' required='true' v-on:focus='findName($event, "firstName")' v-on:blur='guest.firstName = $event.currentTarget.value.trim(); findGuests($event);' v-validate='{required: true}'
 
           div class='f-1 p-left@media-medium'
             label for='lastName' class='hidden' Last Name
             div class='c-textfield b-bottom'
-              input class='bg-blue-light' type='text' value='' name='Name Last' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-model='guest.lastName' v-on:blur='findGuests' v-validate='{required: true}'
+              input class='bg-blue-light' type='text' value='' name='Name Last' class='w-100p' id='lastName' placeholder='Last Name' required='true' v-on:focus='findName($event, "lastName")' v-on:blur='guest.lastName = $event.currentTarget.value.trim(); findGuests($event);' v-validate='{required: true}'
 
         div
           p class='c-red-mid m-top-3 m-bottom' v-if='errors.has("_replyto")' Please enter a valid email;
@@ -59,53 +59,73 @@
 
           h3 class='m-bottom-3' Which guests will be attending with you?
 
-          label class='d-block c-checkbox m-bottom m-horizontal' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
-            input v-bind:id='g.firstName + g.lastName' v-bind:name='"+ " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
-            span class='c-checkbox__input'
-              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+          label class='d-block c-checkbox m-bottom' v-for='g in guest.guests' v-bind:for='g.firstName + g.lastName'
+            input v-bind:id='g.firstName + g.lastName' v-bind:name='"+ " + g.firstName + " " + g.lastName' type='checkbox' value='Yes' v-model='g.response'
+            = mixin('c-checkbox__input')
             span class='c-checkbox__label' {{ g.firstName }} {{ g.lastName }}
             span class='c-checkbox__bg'
 
         fieldset class='m-bottom-3 animated fadeInUp ad-1_5s'
 
-          h3 class='m-bottom-3' Your Dietary restrictions
+          h3 class='m-bottom-3' Your dietary restrictions
 
           label class='d-block c-checkbox m-bottom' for='vegetarian'
             input id='vegetarian' name='Diet Vegetarian' type='checkbox' value='Yes'
-            span class='c-checkbox__input'
-              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            = mixin('c-checkbox__input')
             span class='c-checkbox__label' Vegetarian
             span class='c-checkbox__bg'
 
           label class='d-block c-checkbox m-bottom' for='glutenFree'
             input id='glutenFree' name='Diet Gluten Free' type='checkbox' value='Yes'
-            span class='c-checkbox__input'
-              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+            = mixin('c-checkbox__input')
             span class='c-checkbox__label' Gluten free
             span class='c-checkbox__bg'
 
-        fieldset class='m-bottom-3 animated fadeInUp ad-1_75s' v-for='g in guest.guests'
-
-          h3 class='m-bottom-3' Dietary restrictions for {{ g.firstName }}
-
-          label class='d-block c-checkbox m-bottom' v-bind:for='"vegetarian"+ g.firstName + g.lastName'
-            input v-bind:id='"vegetarian"+ g.firstName + g.lastName' v-bind:name='"Diet Vegetarian " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
-            span class='c-checkbox__input'
-              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-            span class='c-checkbox__label' Vegetarian
+          label class='d-block c-checkbox m-bottom' for='dietOther'
+            input id='dietOther' name='Diet Other' type='checkbox' value='true' v-model='guest.dietOther'
+            = mixin('c-checkbox__input')
+            span class='c-checkbox__label' Other
             span class='c-checkbox__bg'
 
-          label class='d-block c-checkbox m-bottom' v-bind:for='"glutenFree"+ g.firstName + g.lastName'
-            input v-bind:id='"glutenFree"+ g.firstName + g.lastName' v-bind:name='"Diet Gluten Free " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
-            span class='c-checkbox__input'
-              svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
-            span class='c-checkbox__label' Gluten free
-            span class='c-checkbox__bg'
+          div v-if='guest.dietOther'
+            p class='c-red-mid m-top m-bottom' v-if='errors.has("Diet Other Description")'
+              | Please describe your dietary restriction;
+            label for='dietOtherDescription' class='hidden'
+              | Please describe your dietary restriction;
+            div class='c-textfield b-bottom'
+              input class='bg-blue-light' type='text' value='' name='Diet Other Description' class='w-100p' id='dietOtherDescription' placeholder="For example, I'm allergic to..." required='true' v-validate='{required: true}'
+
+        div v-for='g in guest.guests'
+
+          fieldset class='m-bottom-3 animated fadeInUp ad-1_75s'
+
+            h3 class='m-bottom-3' Dietary restrictions for {{ g.firstName }}
+
+            label class='d-block c-checkbox m-bottom' v-bind:for='"vegetarian"+ g.firstName + g.lastName'
+              input v-bind:id='"vegetarian"+ g.firstName + g.lastName' v-bind:name='"Diet Vegetarian " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label' Vegetarian
+              span class='c-checkbox__bg'
+
+            label class='d-block c-checkbox m-bottom' v-bind:for='"glutenFree" + g.firstName + g.lastName'
+              input v-bind:id='"glutenFree"+ g.firstName + g.lastName' v-bind:name='"Diet Gluten Free " + g.firstName + " " + g.lastName' type='checkbox' value='Yes'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label' Gluten free
+              span class='c-checkbox__bg'
+
+            label class='d-block c-checkbox m-bottom' v-bind:for='"dietOther" + g.firstName + g.lastName'
+              input v-bind:id='"dietOther" + g.firstName + g.lastName' v-bind:name='"Diet Other" + g.firstName + " " + g.lastName' type='checkbox' value='true' v-model='g.dietOther'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label' Other
+              span class='c-checkbox__bg'
+
+            div v-if='g.dietOther'
+              p class='c-red-mid m-top m-bottom' v-if='errors.has("Diet Other Description" + g.firstName + " " + g.lastName)'
+                | Please describe {{ g.firstName }}'s dietary restriction;
+              label v-bind:for='"dietOtherDescription" + g.firstName + g.lastName' class='hidden'
+                | Please describe {{ g.firstName }}'s dietary restriction;
+              div class='c-textfield b-bottom'
+                input class='bg-blue-light' type='text' value='' v-bind:name='"Diet Other Description" + g.firstName + " " + g.lastName' class='w-100p' v-bind:id='"dietOtherDescription" + g.firstName + g.lastName' placeholder="For example, they're allergic to..." required='true' v-validate='{required: true}'
 
         fieldset class='m-bottom-3 animated fadeInUp ad-2s'
 
@@ -114,32 +134,23 @@
           div class='m-bottom'
             label class='d-block c-checkbox' for='lodging-catskillsSeasonsInn'
               input id='lodging-catskillsSeasonsInn' name='Lodging' type='radio' value='Catskills Seasons Inn'
-              span class='c-checkbox__input'
-                svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                  path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+              = mixin('c-checkbox__input')
               span class='c-checkbox__label' Catskills Seasons Inn
               span class='c-checkbox__bg'
 
           div class='m-bottom'
             label class='d-block c-checkbox' for='lodging'
               input id='lodging' name='Lodging' type='radio' value='Camping'
-              span class='c-checkbox__input'
-                svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                  path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+              = mixin('c-checkbox__input')
               span class='c-checkbox__label' Camping on the farm
               span class='c-checkbox__bg'
 
           div class='m-bottom'
             label class='d-block c-checkbox' for='lodging-other'
-              input id='lodging-other' name='Lodging' type='radio' value='Other'
-              span class='c-checkbox__input'
-                svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
-                  path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
+              input id='lodging-other' name='Lodging' type='radio' value='Other' v-model='guest.lodging'
+              = mixin('c-checkbox__input')
               span class='c-checkbox__label' Other
               span class='c-checkbox__bg'
-
-
-
 
       div style='position: fixed; left: -100%;' aria-hidden='true'
         input type='text' name='_gotcha'
@@ -148,10 +159,10 @@
         input type='hidden' name="_next" value="thank-you-sorry" v-if='response === "No"'
         input type='hidden' name="_next" value="looking-forward-to-seeing-you" v-if='response === "Yes"'
 
-      div class='ta-center p-vertical-3 m-bottom-3 animated fadeInUp ad-2_25s'
-        button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' Submit RSVP
-
-    p class='ta-center p-horizontal' == "If there's any issue with the form above email us directly: rsvp@natalyandevon.com."
+      div class='ta-center p-vertical-3 animated fadeInUp ad-2_25s'
+        button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' v-on:click='validate' Submit RSVP
+        p class='c-red-mid m-top-3 m-bottom-3' v-if='errors.any()'
+          | Some required fields aren't filled out. Please fill out before submitting.
 
   = content('script')
     script src='https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js'

@@ -8,11 +8,12 @@ html lang='en'
 
 body style='visibility: hidden;' onload='load()' class='bg-blue-light'
 
-  header class='filter filter-multiply filter-blue-light filter-fallback-green-mid animated fadeIn ad-1s'
-    div class='mh-125vh bs-cover filter filter-green-dark filter-screen filter-fade' style='background-image: url(images/img-north-south-lake.png); background-position: 50% 0%; min-height: 1000px'
+  header class='filter filter-multiply filter-blue-light filter-fallback-green-mid'
+    div class='mh-125vh bs-cover filter filter-green-dark filter-screen filter-fade' style='background-image: url(images/img-north-south-lake.png); background-position: 88% 0%; min-height: 1000px'
 
-      div class='wrap ta-center d-flex ai-center@media-medium mh-66vh animated fadeInUp ad-1_75s'
-        div class='m-auto p-3 bs-border-box' style='max-width: 474px'
+      div class='wrap ta-center mh-66vh'
+        = mixin('nav')
+        div class='m-auto p-3 bs-border-box animated fadeInUp ad-1_75s' style='max-width: 474px'
           = content('title')
 
   main class='bg-green-dark f-smooth'

@@ -1,3 +1,5 @@
+- title = 'Thank You'
+
 / Layout
 = extend('layouts/rsvp')
 
@@ -9,7 +11,7 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'Thank You • Natalya and Devon')
+  = mixin('head', 'Thank You • Natalya & Devon')
 
 = content('content')
   header class='ta-center d-flex ai-center jc-center mh-100vh w-100p'

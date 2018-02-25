@@ -1,3 +1,5 @@
+- title = 'Lodging'
+
 / Layout
 = extend('layouts/page-hunter-mountain')
 
@@ -8,11 +10,11 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'Lodging • Natalya and Devon')
+  = mixin('head', 'Lodging • Natalya & Devon')
 
 = content('title')
   h1 class='hidden' Natalya & Devon
-  h2 class='m-bottom-2' Lodging
+  h2 class='d-none d-block@media-small m-bottom-2' – ${title} –
 
   h3 class='ffs-dlig m-bottom-3' The Catskills are a popular getaway destination. We recommend booking now.
   div class='ta-left m-bottom'

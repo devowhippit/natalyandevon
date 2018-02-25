@@ -8,9 +8,9 @@
     "vars": "src/vars.json"
   },
   "name": "natalyandevon.com",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "natalyandevon.com",
-  "main": "serve.js",
+  "main": "",
   "scripts": {
     "test": "",
     "start": "PORT=$npm_package_config_port VARS=$npm_package_config_vars concurrently 'npm run styles-watch' 'npm run scripts-watch' 'npm run build-watch' 'npm run serve' 'npm run sync'",
@@ -24,14 +24,14 @@
     "styles-cssnano": "cssnano --sourcemap < $npm_package_config_style_packed > $npm_package_config_style_dist",
     "styles-mqpacker": "mqpacker $npm_package_config_style_bundle > $npm_package_config_style_packed",
     "styles": "npm run styles-vars && node-sass --sourceMapEmbed true --include-path node_modules $npm_package_config_style_src $npm_package_config_style_bundle && npm run styles-mqpacker && npm run styles-cssnano",
-    "scripts": "rollup -c rollup.js",
-    "scripts-watch": "rollup -c rollup.js -w"
+    "scripts": "rollup -c ./rollup.js",
+    "scripts-watch": "rollup -c ./rollup.js -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devowhippit/natalyandevon.git"
   },
-  "author": "Devon Hirth and Natalya Krimgold",
+  "author": "Devon Hirth & Natalya Krimgold",
   "bugs": {
     "url": "https://github.com/devowhippit/natalyandevon/issues"
   },
@@ -65,6 +65,7 @@
   "dependencies": {
     "animate.scss": "0.0.6",
     "lodash": "^4.17.4",
+    "miss-plete-js": "^1.4.5",
     "vee-validate": "^2.0.0-rc.18",
     "vue": "^2.4.4"
   }

@@ -1,3 +1,5 @@
+- title = 'Activities'
+
 / Layout
 = extend('layouts/page-town-tinker')
 
@@ -8,12 +10,12 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'Activities • Natalya and Devon')
+  = mixin('head', 'Activities • Natalya & Devon')
 
 = content('title')
   div class='m-auto' style='max-width: 474px'
     h1 class='hidden' Natalya & Devon
-    h2 class='m-bottom-2' Activities
+    h2 class='d-none d-block@media-small m-bottom-2' – ${title} –
 
     h3 class='ffs-dlig m-bottom-3' The Catskills are an ideal place to unwind and enjoy the natural splendor of the Northeast.
     div class='ta-left m-bottom'
@@ -25,13 +27,20 @@
     a href='#fishing' Fishing
     a href='#dining' Dining
     a href='#relaxation' Relaxation
-    a href='#towns' Towns
+    a href='#other' Other
 
 = content('body')
   section#hiking  class='m-auto' style='max-width: 474px'
     div class='p-vertical-3 m-vertical-3'
       div class='p-vertical-3 m-vertical-3'
         h1 class='h2 m-bottom-3' Hiking
+        p class='ta-left'
+          | Here are some hikes that challenged and invigorated us.
+          |  <a href="https://www.nynjtc.org/maps/catskill-trails-map" target="_blank">
+          | Hiking maps are provided by the New York-New Jersey Trail Conference,
+          |  Inc and can be purchased online</a>. The trails are well established
+          | and traveled but always be prepared before you go. Bring plenty of
+          | water, snacks, and appropriate clothes for the weather!
 
         table class='table ta-left m-auto m-bottom-3'
           tr
@@ -165,13 +174,18 @@
             td
               p A public garden in the Catskill Mountains dedicated to displaying and managing native plant communities of the northeastern US. Its mountain top elevation of 2,400 feet at the top of the New York City Watershed creates a unique environment with 178 acres of plant collections, natural meadows, wetlands, forest and Devonian bedrock.
 
-  section#towns class='m-auto' style='max-width: 474px'
+  section#other class='m-auto' style='max-width: 474px'
     div class='b-top m-auto' style='max-width: 200px'
     div class='p-vertical-3 m-vertical-3'
       div class='p-top-3 m-top-3'
-        h1 class='h2 m-bottom-3' Towns
+        h1 class='h2 m-bottom-3' Other
 
       table class='table ta-left m-auto m-bottom-3'
+        tr
+          td
+            a href='http://mountainjam.com' target='_blank' Mountain Jam
+          td
+            p A three day music festival on Hunter Mountain that happens to overlap with our wedding. We encourage day passes for Friday the 15th (before our welcome event) or Sunday the 17th after our farewell brunch!
         tr
           td
             a href='https://goo.gl/maps/zeUrgnxstPv' target='_blank' Woodstock

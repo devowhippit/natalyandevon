@@ -1,3 +1,5 @@
+- title = 'Newton Farm'
+
 / Layout
 = extend('layouts/page-newton-farm')
 
@@ -8,18 +10,18 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'Newton Farm • Natalya and Devon')
+  = mixin('head', 'Newton Farm • Natalya & Devon')
 
 = content('title')
   h1 class='hidden' Natalya & Devon
-  h2 class='m-bottom-2' Newton Farm
+  h2 class='d-none d-block@media-small m-bottom-2' – ${title} –
 
   h3 class='ffs-dlig m-bottom-3' <a href='https://goo.gl/maps/KjwXgiSVveo' target='_blank' class='regular-caps'>228 Spruceton Rd <br class='d-none@media-medium'><span class='d-none d-inline@media-medium'>•</span> West Kill, NY 12492</a>
   div class='ta-left m-bottom'
     p <a href='http://newtonfarmny.com/' target='_blank' title='Learn more about Newton Farm'>Newton Farm</a> is an historic 1860 farm owned by chef and restaurateur <a href='http://www.nycfoodpolicy.org/14518-2/' target='_blank' title='Learn more about Lynn Loflin'>Lynn Loflin</a> and her husband Stu and son Ian.
     p Lynn graciously agreed to host and cater our wedding. It has been a pleasure to collaborate with her and we’re grateful for all of her good ideas and good sense.
 
-  a class='btn' href='https://photos.app.goo.gl/YLgpnKOuDtCEUUMx2' target='_blank' View Photos of Newton Farm
+  a href='https://photos.app.goo.gl/YLgpnKOuDtCEUUMx2' target='_blank' View Photos of Newton Farm
 
 = content('body')
   section class='p-vertical-3 m-vertical-3'

@@ -423,12 +423,12 @@ const GUESTLIST = [{
         lastName: 'Berge',
         guests: [{
             firstName: 'Noel',
-            lastName: 'C'
+            lastName: 'Chanyungco'
         }]
     },
     {
         firstName: 'Noel',
-        lastName: 'C',
+        lastName: 'Chanyungco',
         guests: [{
             firstName: 'Elevine',
             lastName: 'Berge'

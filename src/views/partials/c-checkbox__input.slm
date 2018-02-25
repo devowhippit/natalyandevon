@@ -1,0 +1,4 @@
+= mixin('c-checkbox__input')
+  span class='c-checkbox__input'
+    svg version='1.1' class='c-checkbox__checkmark' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' xml:space='preserve'
+      path class='c-checkbox__checkmark__path stroke-blue-dark' fill='none' d='M1.73,12.91 8.1,19.28 22.79,4.59'
