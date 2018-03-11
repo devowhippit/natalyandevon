@@ -1,7 +1,7 @@
 = partial('c-checkbox__input.slm')
 
 = mixin('rsvp')
-  p class='ta-center p-horizontal'
+  p class='ta-center p-horizontal animated fadeIn ad-1s'
     | If there's any issue with the form below email us directly: rsvp@natalyandevon.com.
 
   div data-js="rsvp"
@@ -133,14 +133,14 @@
 
           div class='m-bottom'
             label class='d-block c-checkbox' for='lodging-catskillsSeasonsInn'
-              input id='lodging-catskillsSeasonsInn' name='Lodging' type='radio' value='Catskills Seasons Inn'
+              input id='lodging-catskillsSeasonsInn' name='Lodging' type='radio' value='Catskills Seasons Inn' v-model='guest.lodging'
               = mixin('c-checkbox__input')
-              span class='c-checkbox__label' Catskills Seasons Inn
+              span class='c-checkbox__label' Catskill Seasons Inn
               span class='c-checkbox__bg'
 
           div class='m-bottom'
             label class='d-block c-checkbox' for='lodging'
-              input id='lodging' name='Lodging' type='radio' value='Camping'
+              input id='lodging' name='Lodging' type='radio' value='Camping' v-model='guest.lodging'
               = mixin('c-checkbox__input')
               span class='c-checkbox__label' Camping on the farm
               span class='c-checkbox__bg'
@@ -151,6 +151,15 @@
               = mixin('c-checkbox__input')
               span class='c-checkbox__label' Other
               span class='c-checkbox__bg'
+
+          div v-if='guest.lodging == "Other"'
+            label for='dietOtherDescription' class='hidden'
+              | Name or address of accomodation;
+            div class='c-textfield b-bottom'
+              input class='bg-blue-light' type='text' value='' name='Lodging Other' class='w-100p' id='lodgingOtherDescription' placeholder="Name or address of accomodation"
+
+          p class='m-top-3'
+            a href='/lodging' target='_blank' Click here to see lodging information.
 
       div style='position: fixed; left: -100%;' aria-hidden='true'
         input type='text' name='_gotcha'

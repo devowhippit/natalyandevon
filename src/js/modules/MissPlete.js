@@ -84,7 +84,7 @@ class MissPlete {
   }
 
   static get MAX_ITEMS() {
-    return 8;
+    return 0;
   }
 
   static listItemFn(scoredOption, itemIndex) {

@@ -3,10 +3,7 @@
 const GUESTLIST = [{
         firstName: 'Sarah',
         lastName: 'Seely',
-        guests: [{
-            firstName: 'Sam',
-            lastName: ''
-        }]
+        guests: []
     },
     {
         firstName: 'Barbara',
@@ -519,12 +516,12 @@ const GUESTLIST = [{
         lastName: 'Conroy',
         guests: [{
             firstName: 'Claire',
-            lastName: 'Conroy'
+            lastName: 'Frandsen'
         }]
     },
     {
         firstName: 'Claire',
-        lastName: 'Conroy',
+        lastName: 'Frandsen',
         guests: [{
             firstName: 'John',
             lastName: 'Conroy'
@@ -839,14 +836,6 @@ const GUESTLIST = [{
         }]
     },
     {
-        firstName: 'Cher',
-        lastName: 'Culshaw',
-        guests: [{
-            firstName: 'Scott',
-            lastName: 'Culshaw'
-        }]
-    },
-    {
         firstName: 'Neil',
         lastName: 'Elliott',
         guests: [{
@@ -908,6 +897,48 @@ const GUESTLIST = [{
         guests: [{
             firstName: 'Marianne',
             lastName: 'Kozelka'
+        }]
+    },
+    {
+        firstName: 'Kasey',
+        lastName: 'Zapatka',
+        guests: []
+    },
+    {
+        firstName: 'Hart',
+        lastName: 'Liddel',
+        guests: []
+    },
+    {
+        firstName: 'Cristian',
+        lastName: 'Montoya',
+        guests: [{
+            firstName: 'Rachel',
+            lastName: 'Sanzo'
+        }]
+    },
+    {
+        firstName: 'Rachel',
+        lastName: 'Sanzo',
+        guests: [{
+            firstName: 'Cristian',
+            lastName: 'Montoya'
+        }]
+    },
+    {
+        firstName: 'Toshi',
+        lastName: 'Woudenberg',
+        guests: [{
+            firstName: 'Kathryn',
+            lastName: 'Ballo'
+        }]
+    },
+    {
+        firstName: 'Kathryn',
+        lastName: 'Ballo'
+        guests: [{
+            firstName: 'Toshi',
+            lastName: 'Woudenberg'
         }]
     }
 ];
