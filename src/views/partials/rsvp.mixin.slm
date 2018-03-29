@@ -25,7 +25,7 @@
           input id='attending-no' name='Attending' type='radio' value='No' required='true' v-model='response'
           = mixin('c-checkbox__input')
           span class='c-checkbox__label'
-            | No, I can't make it
+            | No, unfortunately I can't make it
           span class='c-checkbox__bg'
 
       fieldset class='m-bottom-3 animated fadeInUp ad-1_25s p-relative zi-1'
@@ -127,7 +127,7 @@
               div class='c-textfield b-bottom'
                 input class='bg-blue-light' type='text' value='' v-bind:name='"Diet Other Description" + g.firstName + " " + g.lastName' class='w-100p' v-bind:id='"dietOtherDescription" + g.firstName + g.lastName' placeholder="For example, they're allergic to..." required='true' v-validate='{required: true}'
 
-        fieldset class='m-bottom-3 animated fadeInUp ad-2s'
+        fieldset class='m-bottom-3 animated fadeInUp ad-1_75s'
 
           h3 class='m-bottom-3' Lodging plans
 
@@ -156,10 +156,82 @@
             label for='dietOtherDescription' class='hidden'
               | Name or address of accomodation;
             div class='c-textfield b-bottom'
-              input class='bg-blue-light' type='text' value='' name='Lodging Other' class='w-100p' id='lodgingOtherDescription' placeholder="Name or address of accomodation"
+              input class='bg-blue-light' type='text' value='' name='Lodging Details' class='w-100p' id='lodgingOtherDescription' placeholder="Name or address of accomodation"
 
           p class='m-top-3'
-            a href='/lodging' target='_blank' Click here to see lodging information.
+            a href='/lodging' target='_blank' Click here to see lodging recommendations
+
+        fieldset class='m-bottom-3 animated fadeInUp ad-1_75s'
+
+          h3
+            | Welcome Drinks
+
+          p class='m-bottom-3'
+            | Friday, June 15<sup>th</sup> at 8pm
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='welcome-drinks-yes'
+              input id='welcome-drinks-yes' name='Attending Welcome Drinks' type='radio' value='Yes' checked='true'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label'
+                | Yes, I'm coming
+              span class='c-checkbox__bg'
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='welcome-drinks-no'
+              input id='welcome-drinks-no' name='Attending Welcome Drinks' type='radio' value='No'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label'
+                | No, unfortunately I can't make it
+              span class='c-checkbox__bg'
+
+        fieldset class='m-bottom-3 animated fadeInUp ad-1_75s'
+
+          h3
+            | Ceremony & Reception
+
+          p class='m-bottom-3'
+            | Saturday, June 16<sup>th</sup> at 4pm
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='ceremony-reception-yes'
+              input id='ceremony-reception-yes' name='Attending Ceremony/Reception' type='radio' value='Yes' checked='true'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label'
+                | Yes, I'm coming
+              span class='c-checkbox__bg'
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='ceremony-reception-no'
+              input id='ceremony-reception-no' name='Attending Ceremony/Reception' type='radio' value='No'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label'
+                | No, unfortunately I can't make it
+              span class='c-checkbox__bg'
+
+        fieldset class='m-bottom-3 animated fadeInUp ad-1_75s'
+
+          h3
+            | Farewell Brunch
+
+          p class='m-bottom-3'
+            | Sunday, June 17<sup>th</sup> at 11am
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='farewell-brunch-yes'
+              input id='farewell-brunch-yes' name='Attending Farewell Brunch' type='radio' value='Yes' checked='true'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label'
+                | Yes, I'm coming
+              span class='c-checkbox__bg'
+
+          div class='m-bottom'
+            label class='d-block c-checkbox' for='farewell-brunch-no'
+              input id='farewell-brunch-no' name='Attending Farewell Brunch' type='radio' value='No'
+              = mixin('c-checkbox__input')
+              span class='c-checkbox__label'
+                | No, unfortunately I can't make it
+              span class='c-checkbox__bg'
 
       div style='position: fixed; left: -100%;' aria-hidden='true'
         input type='text' name='_gotcha'
@@ -168,7 +240,7 @@
         input type='hidden' name="_next" value="thank-you-sorry" v-if='response === "No"'
         input type='hidden' name="_next" value="looking-forward-to-seeing-you" v-if='response === "Yes"'
 
-      div class='ta-center p-vertical-3 animated fadeInUp ad-2_25s'
+      div class='ta-center p-vertical-3 animated fadeInUp ad-1_75s'
         button type='submit' name='Submit' id='submit' class='btn bg-blue-dark@hover' v-on:click='validate' Submit RSVP
         p class='c-red-mid m-top-3 m-bottom-3' v-if='errors.any()'
           | Some required fields aren't filled out. Please fill out before submitting.
