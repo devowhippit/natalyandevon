@@ -31,3 +31,5 @@
         a href='rsvp' RSVP
       - else
         span class='hyperlink active' RSVP
+
+      a href='https://www.zola.com/registry/natalyandevon' title='Registry' Registry
