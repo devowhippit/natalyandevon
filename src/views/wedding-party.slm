@@ -29,10 +29,13 @@
         ul class='c-list-plain'
           li
             b 9am – 2pm
-          li West Kill Mountain
           li
-            a  class='inherit' href='https://goo.gl/maps/KAzzfMVmbRy' target='_blank' 2778 Spruceton Road
-          li Hiking Attire
+            | West Kill Mountain •&nbsp;
+            a class='inherit' href='https://goo.gl/maps/KAzzfMVmbRy' target='_blank' Trailhead
+          li
+            | Meet at Newton Farm •&nbsp;
+            a class='inherit' href='https://goo.gl/maps/znsqHtHB9KD2' target='_blank' 228 Spruceton Road
+          li Hiking Attire, Snacks, and Water
 
       section#bridal-spa-day class='m-vertical-3'
         h3 class='h2'
