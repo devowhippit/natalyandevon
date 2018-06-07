@@ -14,9 +14,10 @@
   = mixin('head', 'RSVP • Natalya & Devon')
 
 = content('content')
-  header class='ta-center p-top-3 m-top-3  animated fadeIn ad-1s'
+  header class='ta-center p-top-3 m-top-3'
     h1 class='hidden' Natalya & Devon
     h2 – ${title} –
 
-  main class='wrap m-auto p-bottom-3 m-bottom-3' style='max-width: 474px'
-    = mixin('rsvp')
+  main class='wrap m-auto p-vertical-3 m-vertical-3' style='max-width: 474px'
+    // = mixin('rsvp')
+    h1 class='h3 ta-center' Please call if you need to reach us. Thank you!

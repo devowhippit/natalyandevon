@@ -27,9 +27,9 @@
       - else
         span class='hyperlink active' Activities
 
-      - if title != 'RSVP'
-        a href='rsvp' RSVP
+      - if title != 'Wedding Events'
+        a href='events' Events
       - else
-        span class='hyperlink active' RSVP
+        span class='hyperlink active' Events
 
       a href='https://www.zola.com/registry/natalyandevon' title='Registry' Registry

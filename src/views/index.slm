@@ -25,7 +25,7 @@
           div class='p-3 w-100p ta-center m-auto' style='max-width: 474px'
             header
               h1 class='hidden' Natalya & Devon
-              h2 class=''
+              h2
                 | – Welcome loved ones –
 
             h3 class='ffs-dlig m-bottom-3'
@@ -34,7 +34,7 @@
               p class='ta-left'
                 | We’d love to help you figure out how to get to our wedding, where to stay, and what to do in the beautiful Catskill Mountains. Check out our tips below. We hope you'll join us. – Natalya & Devon
               p class='ta-center ff-bold' June 16th, 2018 • 228 Spruceton Rd, West Kill, NY 12492
-            a class='btn bg-blue-dark@hover' href='rsvp' title='RSVP' class='m-horizontal' RSVP
+            a class='btn bg-blue-dark@hover' href='events' title='Wedding Events' class='m-horizontal' Events
             a class='btn bg-blue-dark@hover' href='https://www.zola.com/registry/natalyandevon' title='Registry' class='m-horizontal' Registry
 
     div class='d-flex@media-medium jc-end ai-stretch fd-column fd-row@media-medium bg-base-white'

@@ -1,0 +1,98 @@
+- title = 'Wedding Party & Family Events'
+
+/ Layout
+= extend('layouts/rsvp')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Wedding Party & Family Events • Natalya & Devon')
+
+= content('content')
+  header class='ta-center p-top-3 m-top-3  animated fadeIn ad-1s'
+    h1 class='hidden' Natalya & Devon
+    h2 – ${title} –
+
+  main class='wrap m-auto p-bottom-3 m-bottom-3 ta-center' style='max-width: 540px'
+    div class='p-vertical-3 m-vertical-3 animated fadeInUp ad-1s'
+
+      h1#friday class='h2'
+        a href='#friday' Friday, June 15TH
+
+      section#groomsmen-hike class='m-vertical-3'
+        h3 class='h2'
+          a href='#groomsmen-hike' Groomsmen Hike
+        ul class='c-list-plain'
+          li
+            b 9am – 2pm
+          li West Kill Mountain
+          li
+            a  class='inherit' href='https://goo.gl/maps/KAzzfMVmbRy' target='_blank' 2778 Spruceton Road
+          li Hiking Attire
+
+      section#bridal-spa-day class='m-vertical-3'
+        h3 class='h2'
+          a href='#bridal-spa-day' Bridal Spa Day
+        ul class='c-list-plain'
+          li
+            b 10am – 1:30pm
+          li Emerson Resort & Spa
+          li
+            a  class='inherit' href='https://goo.gl/maps/CCBBy6LP8uy' target='_blank' 5340 NY-28, Mt Tremper, NY
+          li Casual & Bathing Attire
+
+      section#rehearsal class='m-vertical-3'
+        h3 class='h2'
+          a href='#rehearsal' Rehearsal
+        ul class='c-list-plain'
+          li
+            b 4pm
+          li Newton Farm
+          li
+            a  class='inherit' href='https://goo.gl/maps/znsqHtHB9KD2' target='_blank' 228 Spruceton Road
+          li Elegant Attire
+
+      section#rehearsal-dinner class='m-vertical-3 p-bottom-3'
+        h3 class='h2'
+          a href='#rehearsal-dinner' Rehearsal Dinner
+        ul class='c-list-plain'
+          li
+            b 6pm
+          li West Kill Community Hall
+          li
+            a  class='inherit' href='https://goo.gl/maps/7bsJZg42qH22' target='_blank' 141 Spruceton Road
+          li Elegant Attire
+
+      h1#saturday class='h2'
+        a href='#saturday' Wedding Party Events • Saturday, June 16TH
+
+      section#brunch-and-grooming class='m-vertical-3'
+        h3 class='h2'
+          a href='#brunch-and-grooming' Brunch and Grooming
+        ul class='c-list-plain'
+          li
+            b 10am – 1pm
+          li Newton Farm
+          li
+            a  class='inherit' href='https://goo.gl/maps/znsqHtHB9KD2' target='_blank' 228 Spruceton Road
+          li Casual to Wedding Attire
+
+      section#first-look-photo-shoot class='m-vertical-3 p-bottom-3'
+        h3#first-look-photo-shoot class='h2'
+          a href='#first-look-photo-shoot' First Look Photo Shoot
+        ul class='c-list-plain'
+          li
+            b 1:30pm – 3pm
+          li Ashokan Reservoir
+          li
+            a  class='inherit' href='https://goo.gl/maps/TvsThWYeWoo' target='_blank' Reservoir Road, see map
+          li Wedding Attire
+
+      section class='m-vertical-3'
+        p The Newton Farm landline is 518.989.6079.
+        p
+          a href='pdfs/wedding-party-schedule.pdf' target='_blank' Download schedule here.

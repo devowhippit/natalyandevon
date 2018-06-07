@@ -1,0 +1,60 @@
+- title = 'Wedding Events'
+
+/ Layout
+= extend('layouts/rsvp')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Wedding Events • Natalya & Devon')
+
+= content('content')
+  header class='ta-center p-top-3 m-top-3  animated fadeIn ad-1s'
+    h1 class='hidden' Natalya & Devon
+    h2 – ${title} –
+
+  main class='wrap m-auto p-bottom-3 m-bottom-3 ta-center' style='max-width: 540px'
+    div class='p-vertical-3 m-vertical-3 animated fadeInUp ad-1s'
+
+      section#welcome-drinks class='m-vertical-3'
+        h3 class='h2'
+          a href='#welcome-drinks' Welcome Drinks
+        ul class='c-list-plain'
+          li
+            b Friday, June 15TH, 8pm – 10pm
+          li West Kill Community Hall
+          li
+            a class='inherit' href='https://goo.gl/maps/7bsJZg42qH22' target='_blank' 141 Spruceton Road
+          li Elegant Attire
+
+      section#ceremony-and-reception class='m-vertical-3'
+        h3 class='h2'
+          a href='#ceremony-and-reception' Ceremony and Reception
+        ul class='c-list-plain'
+          li
+            b Saturday, June 16TH, 4pm – 1am
+          li Newton Farm
+          li
+            a class='inherit' href='https://goo.gl/maps/znsqHtHB9KD2' target='_blank' 228 Spruceton Road
+          li Formal Attire
+
+      section#rehearsal class='m-vertical-3 p-bottom-3'
+        h3 class='h2'
+          a href='#rehearsal' Farewell Brunch
+        ul class='c-list-plain'
+          li
+            b Sunday, June 17th, 11am – 2pm
+          li Newton Farm
+          li
+            a class='inherit' href='https://goo.gl/maps/znsqHtHB9KD2' target='_blank' 228 Spruceton Road
+          li Casual Attire
+
+      section class='m-vertical-3'
+        p The Newton Farm landline is 518.989.6079.
+        p
+          a href='pdfs/wedding-events.pdf' target='_blank' Download schedule here.
+
