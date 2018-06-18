@@ -29,13 +29,16 @@
                 | – Welcome loved ones –
 
             h3 class='ffs-dlig m-bottom-3'
-              | We're getting hitched and we want you to celebrate with us.
+              | Thank you for celebrating with us!
             div class='m-bottom'
               p class='ta-left'
-                | We’d love to help you figure out how to get to our wedding, where to stay, and what to do in the beautiful Catskill Mountains. Check out our tips below. We hope you'll join us. – Natalya & Devon
-              p class='ta-center ff-bold' June 16th, 2018 • 228 Spruceton Rd, West Kill, NY 12492
-            a class='btn bg-blue-dark@hover' href='events' title='Wedding Events' class='m-horizontal' Events
-            a class='btn bg-blue-dark@hover' href='https://www.zola.com/registry/natalyandevon' title='Registry' class='m-horizontal' Registry
+                | Feel free to look at the site to find music, photos, and event information from our weekend celebration. It meant a lot to us for you to be there – Natalya & Devon
+              // p class='ta-center ff-bold' June 16th, 2018 • 228 Spruceton Rd, West Kill, NY 12492
+            nav class='c-nav-inline-block'
+              a href='https://www.zola.com/registry/natalyandevon' title='Registry' class='m-horizontal' Registry
+              a href='events' title='Wedding Events' class='m-horizontal' Events
+              a href='wedding-party' title='Wedding Party Events' class='m-horizontal' Wedding Party Events
+              a href='https://open.spotify.com/user/devowhippit/playlist/2tvvdMw8ZnOLzxeRsgVSB7?si=BJXc2OLDSvqKuzDbB2R_PQ' Music
 
     div class='d-flex@media-medium jc-end ai-stretch fd-column fd-row@media-medium bg-base-white'
 

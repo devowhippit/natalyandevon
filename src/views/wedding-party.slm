@@ -95,7 +95,7 @@
             a  class='inherit' href='https://goo.gl/maps/TvsThWYeWoo' target='_blank' Reservoir Road, see map
           li Wedding Attire
 
-      section class='m-vertical-3'
-        p The Newton Farm landline is 518.989.6079.
-        p
-          a href='pdfs/wedding-party-schedule.pdf' target='_blank' Download schedule here.
+      / section class='m-vertical-3'
+      /   p The Newton Farm landline is 518.989.6079.
+      /   p
+      /     a href='pdfs/wedding-party-schedule.pdf' target='_blank' Download schedule here.

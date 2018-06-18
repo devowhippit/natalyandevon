@@ -32,4 +32,15 @@
       - else
         span class='hyperlink active' Events
 
+      - if title != 'Wedding Party Events'
+        a href='wedding-party' Wedding Party
+      - else
+        span class='hyperlink active' Wedding Party
+
+      - if title != 'Music'
+        a href='https://open.spotify.com/user/devowhippit/playlist/2tvvdMw8ZnOLzxeRsgVSB7?si=BJXc2OLDSvqKuzDbB2R_PQ' Music
+      - else
+        span class='hyperlink active' Music
+
+
       a href='https://www.zola.com/registry/natalyandevon' title='Registry' Registry

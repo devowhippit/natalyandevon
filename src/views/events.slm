@@ -53,8 +53,8 @@
             a class='inherit' href='https://goo.gl/maps/znsqHtHB9KD2' target='_blank' 228 Spruceton Road
           li Casual Attire
 
-      section class='m-vertical-3'
-        p The Newton Farm landline is 518.989.6079.
-        p
-          a href='pdfs/wedding-events.pdf' target='_blank' Download schedule here.
+      // section class='m-vertical-3'
+      //   p The Newton Farm landline is 518.989.6079.
+      //   p
+      //     a href='pdfs/wedding-events.pdf' target='_blank' Download schedule here.
 
